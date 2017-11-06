@@ -57,7 +57,7 @@ public class BuildingCreation : MonoBehaviour {
 				Instantiate (building,
 							new Vector3 (grid.transform.position.x, 0, grid.transform.position.z),
 							Quaternion.identity, 
-							parentBuilding.transform);
+							grid.transform);
 			}
 
 			//Industrial building objects
@@ -70,9 +70,10 @@ public class BuildingCreation : MonoBehaviour {
 								grid.transform.position.y,
 								grid.transform.position.z),
 								Quaternion.identity,
-								parentBuilding.transform);
+								grid.transform);
 			}
 
+            grid.AddComponent<Interactible>();
 			z++;
 			x++;
 		}

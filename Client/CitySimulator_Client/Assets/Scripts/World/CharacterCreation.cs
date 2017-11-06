@@ -61,7 +61,7 @@ public class CharacterCreation : MonoBehaviour {
 						0,
 						road.transform.position.z),
 					Quaternion.identity,
-					characterManager.transform);
+					road.transform);
 				population--;
 			}
 
