@@ -76,7 +76,7 @@ public class GridCreation : MonoBehaviour {
 
 				// creates each cell of the grid
 			 	Instantiate(cellPrefab, 
-							new Vector3(x + (cellPrefab.localScale.x * x)*10, 0, z + (cellPrefab.localScale.z * z)*10),
+							new Vector3(x + (cellPrefab.localScale.x * x) * 10, 1, z + (cellPrefab.localScale.z * z) * 10),
 							Quaternion.identity,
 							parentGrid.transform);
 				
