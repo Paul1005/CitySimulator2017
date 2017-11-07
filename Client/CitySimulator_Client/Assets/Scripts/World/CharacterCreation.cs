@@ -58,10 +58,10 @@ public class CharacterCreation : MonoBehaviour {
 
 				Instantiate(character,
 					new Vector3(road.transform.position.x,
-						0,
+                        road.transform.position.y,
 						road.transform.position.z),
 					Quaternion.identity,
-					characterManager.transform);
+					road.transform);
 				population--;
 			}
 

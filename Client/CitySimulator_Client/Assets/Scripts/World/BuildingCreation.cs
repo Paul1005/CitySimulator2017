@@ -55,9 +55,9 @@ public class BuildingCreation : MonoBehaviour {
 
 				//Creating each cell of grid
 				Instantiate (building,
-							new Vector3 (grid.transform.position.x, 0, grid.transform.position.z),
+							new Vector3 (grid.transform.position.x, grid.transform.position.y, grid.transform.position.z),
 							Quaternion.identity, 
-							parentBuilding.transform);
+							grid.transform);
 			}
 
 			//Industrial building objects
@@ -70,9 +70,12 @@ public class BuildingCreation : MonoBehaviour {
 								grid.transform.position.y,
 								grid.transform.position.z),
 								Quaternion.identity,
-								parentBuilding.transform);
+								grid.transform);
 			}
 
+            grid.AddComponent<Interactible>();
+            grid.GetComponent<MeshCollider>().convex = true;
+            //grid.AddComponent<TapToPlaceParent>();
 			z++;
 			x++;
 		}
