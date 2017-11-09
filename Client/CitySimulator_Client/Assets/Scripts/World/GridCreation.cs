@@ -56,8 +56,9 @@ public class GridCreation : MonoBehaviour {
 		size.x = cityDataManager.Size_x;
 		size.z = cityDataManager.Size_z;
 
-//		Debug.Log (cellPrefab.localScale.x +", " + cellPrefab.localScale.z);
-
+        //		Debug.Log (cellPrefab.localScale.x +", " + cellPrefab.localScale.z);
+        float totalX = 0;
+        float totalZ = 0;
 		for(int x = 0; x < size.x; x++){
 			for(int z = 0; z < size.z; z++){
 
@@ -74,14 +75,23 @@ public class GridCreation : MonoBehaviour {
 				// set color index to GridColor to color the grid
 				cellPrefab.GetComponent<GridColor> ().colorIndex = int.Parse(cellPrefab.GetChild (0).GetComponent<TextMesh> ().text);
 
-				// creates each cell of the grid
-			 	Instantiate(cellPrefab, 
-							new Vector3(x + (cellPrefab.localScale.x * x) * 10, 1, z + (cellPrefab.localScale.z * z) * 10),
+                // creates each cell of the grid
+
+                float positionX = x + (cellPrefab.localScale.x * x) * 10;
+                float positionZ = z + (cellPrefab.localScale.z * z) * 10;
+
+                 Instantiate(cellPrefab, 
+							new Vector3(positionX - 27f, 0, positionZ - 26f),
 							Quaternion.identity,
 							parentGrid.transform);
-				
+                print(positionX);
+                print(positionZ);
+                totalX += positionX;
+                totalZ += positionZ;
 			}
 		}
+        print(totalX);
+        print(totalZ);
 	}
 
 	/// <summary>

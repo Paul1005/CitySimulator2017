@@ -53,7 +53,7 @@ public class Interactible : MonoBehaviour
         //print(defaultMaterials.Length);
         for (int i = 0; i < defaultMaterials.Length; i++)
         {
-            print(defaultMaterials[i]);
+           // print(defaultMaterials[i]);
             //print(defaultMaterials[i].mainTexture);
             // 2.d: Uncomment the below line to highlight the material when gaze enters.
             defaultMaterials[i].SetFloat("_Highlight", 0.25f);
