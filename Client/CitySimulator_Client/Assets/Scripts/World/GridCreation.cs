@@ -39,7 +39,7 @@ public class GridCreation : MonoBehaviour {
 	void Start () {
 		parentGrid = GameObject.Find ("Grid");
 		cityDataManager = this.GetComponent<CityDataManager> ();
-		CreateGrid ();
+		createGrid ();
 		//ShowGrid (false);
 	}
 
@@ -49,10 +49,10 @@ public class GridCreation : MonoBehaviour {
 	void Update(){
 	}
 
-	/**
-	 * Creates grid and put zone, coordinate
-	 **/
-	void CreateGrid(){
+	/// <summary>
+	/// Creates the grid.
+	/// </summary>
+	void createGrid(){
 		size.x = cityDataManager.Size_x;
 		size.z = cityDataManager.Size_z;
 
@@ -81,7 +81,7 @@ public class GridCreation : MonoBehaviour {
                 float positionZ = z + (cellPrefab.localScale.z * z) * 10;
 
                  Instantiate(cellPrefab, 
-							new Vector3(positionX - 27f, 0, positionZ - 26f),
+							new Vector3(positionX - size.x*2.7f, 0, positionZ - size.z*2.6f),
 							Quaternion.identity,
 							parentGrid.transform);
                 print(positionX);
@@ -98,7 +98,7 @@ public class GridCreation : MonoBehaviour {
 	/// Shows the grid.
 	/// </summary>
 	/// <param name="onOff">If set to <c>true</c> on.</param>
-	void ShowGrid(bool onOff){
+	void showGrid(bool onOff){
 		// important this will inactivate all grid objects, so the building and other objects will not be rendered.
 		parentGrid.SetActive(onOff);
 	}
