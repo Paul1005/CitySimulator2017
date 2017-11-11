@@ -1,0 +1,4 @@
+C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\Capstone_Prototype\Capstone_Prototype.csproj;x86
+C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;x86
+C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
+C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
