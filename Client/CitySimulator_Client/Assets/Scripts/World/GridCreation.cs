@@ -81,7 +81,7 @@ public class GridCreation : MonoBehaviour {
                 float positionZ = z + (cellPrefab.localScale.z * z) * 10;
 
                  Instantiate(cellPrefab, 
-							new Vector3(positionX - 27f, 0, positionZ - 26f),
+							new Vector3(positionX - size.x*2.7f, 0, positionZ - size.z*2.6f),
 							Quaternion.identity,
 							parentGrid.transform);
                 print(positionX);
