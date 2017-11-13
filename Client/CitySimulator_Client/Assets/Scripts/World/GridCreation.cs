@@ -57,8 +57,8 @@ public class GridCreation : MonoBehaviour {
 		size.z = cityDataManager.Size_z;
 
         //		Debug.Log (cellPrefab.localScale.x +", " + cellPrefab.localScale.z);
-        float totalX = 0;
-        float totalZ = 0;
+        //float totalX = 0;
+        //float totalZ = 0;
 		for(int x = 0; x < size.x; x++){
 			for(int z = 0; z < size.z; z++){
 
@@ -84,14 +84,14 @@ public class GridCreation : MonoBehaviour {
 							new Vector3(positionX - size.x*2.7f, 0, positionZ - size.z*2.6f),
 							Quaternion.identity,
 							parentGrid.transform);
-                print(positionX);
-                print(positionZ);
-                totalX += positionX;
-                totalZ += positionZ;
+               // print(positionX);
+               // print(positionZ);
+                //totalX += positionX;
+                //totalZ += positionZ;
 			}
 		}
-        print(totalX);
-        print(totalZ);
+        //print(totalX);
+        //print(totalZ);
 	}
 
 	/// <summary>
