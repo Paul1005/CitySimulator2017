@@ -2,9 +2,13 @@
 using UnityEngine;
 
 /// <summary>
-/// GestureAction performs custom actions based on 
-/// which gesture is being performed.
-/// </summary>
+/// Module: GestureAction
+/// Team: HoloLens
+/// Description: GestureAction performs custom actions based on which gesture is being performed.
+/// Author:
+///	 Name: Microsoft   Date: Unknown
+/// Based on:
+/// https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_211
 public class GestureAction : MonoBehaviour
 {
     [Tooltip("Rotation max speed controls amount of rotation.")]

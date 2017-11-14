@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 /// <summary>
 /// Module: CharacterCreation
 /// Team: Client
@@ -11,7 +10,9 @@ using UnityEngine;
 ///	 Name: Dongwon(Shawn) Kim   Date: 2017-10-02
 /// Modified by:	
 ///	 Name: Dongwon(Shawn) Kim   Change: initiate belongs to CharacterManager Date: 2017-10-31
+///	 Name: Paul McCarlie        Change: Parented character to grid
 /// Based on:  BuildingCreation.cs
+/// </summary>
 public class CharacterCreation : MonoBehaviour {
 	// population of the city
 	int population;

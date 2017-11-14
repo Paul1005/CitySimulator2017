@@ -1,6 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.VR.WSA.Input;
 
+/// <summary>
+/// Module: GazeGestureManager
+/// Team: HoloLens
+/// Description: Tracks what object is being tapped on, and sends commands to the appropriate script for spatial mapping
+/// Author:
+///	 Name: Microsoft   Date: Unknown
+/// Based on:
+/// https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_101
+/// </summary>
 public class GazeGestureManager : MonoBehaviour
 {
     public static GazeGestureManager Instance { get; private set; }
