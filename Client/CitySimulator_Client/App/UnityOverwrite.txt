@@ -5,9 +5,9 @@
 # Write a line equal to 'overwrite-all' (without quotes) to overwrite everything (preserved accross builds)
 # Write a line equal to 'keep-all' (without quotes) to keep files regardless their modification (preserved accross builds)
 # Default behavior is to never overwrite files
-Capstone_Prototype.sln: 454EF5BF35B6AB7EF323CBC496517EAF
+Capstone_Prototype.sln: modified
 Capstone_Prototype\App.cs: 94F8537FCB803D14013F63696E39A981
-Capstone_Prototype\Capstone_Prototype.csproj: D9E17BF6925F8D8940E05B609C301AD0
+Capstone_Prototype\Capstone_Prototype.csproj: A2F98E9256D9D5185ED9B7C46C32DDE2
 Capstone_Prototype\Capstone_Prototype.csproj.user: BEFB8AC4886C4CFDD3C68445D6F19B04
 Capstone_Prototype\Package.appxmanifest: 175602AD4A7383DAED4B4F0901B9FCA4
 Capstone_Prototype\project.json: 1D02BC64BAC0D041019673A1C4C51737

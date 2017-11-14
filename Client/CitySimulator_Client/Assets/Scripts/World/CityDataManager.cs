@@ -33,7 +33,7 @@ public class CityDataManager : MonoBehaviour {
 	}
 
 	// x number of grids in horizontal
-	private int size_x = 7;
+	private int size_x = 10;
 
 	/// <summary>
 	/// Gets the size x.
@@ -49,7 +49,7 @@ public class CityDataManager : MonoBehaviour {
 	}
 
 	// z number of grids in vertical
-	private int size_z = 7;
+	private int size_z = 10;
 
 	/// <summary>
 	/// Gets the size z.
