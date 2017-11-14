@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: 
     guid: 5688305af3e834e10aad93c79d10f8e8
   - enabled: 1
+    path: Assets/MainMenu_Scene_HoloLens.unity
+    guid: edbf5a1cf7311304abb255b881d2a8a7
+  - enabled: 1
     path: Assets/Main_Scene_HoloLens_Paul.unity
     guid: 302571b729680624ca52bee48e7f04a9
   - enabled: 0

@@ -112,6 +112,7 @@ C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App
 C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\Capstone_Prototype\bin\x86\Release\System.Xml.XmlDocument.dll
 C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\Capstone_Prototype\bin\x86\Release\System.Xml.XmlSerializer.dll
 C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\Capstone_Prototype\bin\x86\Release\BridgeInterface.winmd
+C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\Capstone_Prototype\bin\x86\Release\Newtonsoft.Json.dll
 C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\Capstone_Prototype\bin\x86\Release\nunit.framework.dll
 C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\Capstone_Prototype\bin\x86\Release\UnityEngine.Analytics.dll
 C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\Capstone_Prototype\bin\x86\Release\UnityEngine.dll
@@ -125,6 +126,7 @@ C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App
 C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\Capstone_Prototype\bin\x86\Release\WinRTBridge.winmd
 C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\Capstone_Prototype\bin\x86\Release\WinRTLegacy.dll
 C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\Capstone_Prototype\bin\x86\Release\UnityEngine.pdb
+C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\Capstone_Prototype\bin\x86\Release\Newtonsoft.Json.pdb
 C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\Capstone_Prototype\bin\x86\Release\UnityEngine.Analytics.pdb
 C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\Capstone_Prototype\bin\x86\Release\UnityEngine.Timeline.pdb
 C:\Users\Paul\Documents\GitHub\CitySimulator2017\Client\CitySimulator_Client\App\Capstone_Prototype\bin\x86\Release\nunit.framework.pdb
