@@ -24,8 +24,8 @@ public class GazeGestureManager : MonoBehaviour
             //this is to try and stop the program from getting confused between spacial mapping and rotation gestures
             if (this.tapCount == 2)
             {
-                print("tapcount:" + this.tapCount);
-                print(FocusedObject);
+                //print("tapcount:" + this.tapCount);
+               // print(FocusedObject);
                 // Send an OnSelect message to the focused object and its ancestors.
                 if (FocusedObject != null)
                 {
