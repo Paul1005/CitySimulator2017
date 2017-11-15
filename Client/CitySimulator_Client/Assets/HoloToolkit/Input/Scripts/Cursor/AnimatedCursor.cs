@@ -7,8 +7,11 @@ using UnityEngine;
 namespace HoloToolkit.Unity.InputModule
 {
     /// <summary>
-    /// Animated cursor is a cursor driven using an animator to inject state information
-    /// and animate accordingly
+    /// Module: AnimatedCursor
+    /// Team: HoloLens
+    /// Description: Animated cursor is a cursor driven using an animator to inject state information and animate accordingly
+    /// Author: 
+    ///	Name:  Microsoft   Date:   Unknown
     /// </summary>
     public class AnimatedCursor : Cursor
     {

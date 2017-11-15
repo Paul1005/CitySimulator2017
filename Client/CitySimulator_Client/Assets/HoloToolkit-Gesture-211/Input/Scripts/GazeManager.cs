@@ -3,7 +3,7 @@
 namespace Academy.HoloToolkit.Unity
 {
     /// <summary>
-    /// Module: GazeManager
+    /// Module: GazeManager for main scene
     /// Team: HoloLens
     /// Description: GazeManager determines the location of the user's gaze, hit position and normals
     /// Author:

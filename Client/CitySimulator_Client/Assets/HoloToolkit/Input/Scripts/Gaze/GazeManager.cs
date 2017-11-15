@@ -8,7 +8,11 @@ using UnityEngine.EventSystems;
 namespace HoloToolkit.Unity.InputModule
 {
     /// <summary>
-    /// The gaze manager manages everything related to a gaze ray that can interact with other objects.
+    /// Module: GazeManager for main menu
+    /// Team: HoloLens
+    /// Description: The gaze manager manages everything related to a gaze ray that can interact with other objects.
+    /// Author:
+    ///	Name: Microsoft   Date: Unknown
     /// </summary>
     public class GazeManager : Singleton<GazeManager>, IPointingSource
     {

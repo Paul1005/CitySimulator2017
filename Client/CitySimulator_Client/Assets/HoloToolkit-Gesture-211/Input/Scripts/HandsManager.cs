@@ -3,8 +3,15 @@ using UnityEngine;
 
 namespace Academy.HoloToolkit.Unity
 {
+
     /// <summary>
-    /// HandsManager keeps track of when a hand is detected.
+    /// Module: HandsManager
+    /// Team: HoloLens
+    /// Description: HandsManager keeps track of when a hand is detected.
+    /// Author: 
+    ///	 Name:  Microsoft   Date:   Unknown
+    /// Based on:  
+    /// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_210
     /// </summary>
     public class HandsManager : Singleton<HandsManager>
     {
