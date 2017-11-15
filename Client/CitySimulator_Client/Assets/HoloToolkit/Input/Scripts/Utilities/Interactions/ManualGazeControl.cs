@@ -6,8 +6,12 @@ using UnityEngine;
 namespace HoloToolkit.Unity.InputModule
 {
     /// <summary>
-    /// Class for manually controlling the camera when not running on HoloLens (in editor). 
+    /// Module: ManualGazeControl
+    /// Team: HoloLens
+    /// Description: Class for manually controlling the camera when not running on HoloLens (in editor). 
     /// Attach to same main camera game object.
+    // Author: 
+    ///	 Name:  Microsoft   Date:   Unknown
     /// </summary>
     public class ManualGazeControl : MonoBehaviour
     {

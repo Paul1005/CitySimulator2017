@@ -1,8 +1,16 @@
 ﻿using UnityEngine;
 
 /// <summary>
-/// The Interactible class flags a Game Object as being "Interactible".
-/// Determines what happens when an Interactible is being gazed at.
+/// Module: Interactable
+/// Team: HoloLens
+/// Description:    The Interactible class flags a Game Object as being "Interactible".
+///                 Determines what happens when an Interactible is being gazed at.
+/// Author: 
+///	 Name:  Microsoft   Date:   Unknown
+/// Modified by:	
+///	 Name:  Paul McCarlie   Change: Gazing at object will now make tile text visible, and invisible when gazing away  Date: 2017-10-06
+/// Based on:  
+/// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_210
 /// </summary>
 public class Interactible : MonoBehaviour
 {

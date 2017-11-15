@@ -10,7 +10,8 @@ using UnityEngine;
 ///	 Name: Dongwon(Shawn) Kim    Date: 2017-09-18
 /// Modified by:	
 ///	 Name: Dongwon(Shawn) Kim   Change:	Fix bug 						Date: 2017-09-19
-///  Name: Dongwon(Shawn) Kim   Change:	adding data by CityDataManager  Date: 2017-10-18
+///  Name: Dongwon(Shawn) Kim   Change:	Adding data by CityDataManager  Date: 2017-10-18
+///  Name: Paul McCarlie        Change: Grid now generates with starting point at centre    Date: 2017-11-09
 /// Based on:  
 /// 	https://docs.unity3d.com/ScriptReference/Object.Instantiate.html
 /// 	http://answers.unity3d.com/questions/718778/trying-to-create-a-grid.html

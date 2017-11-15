@@ -6,8 +6,11 @@ using UnityEngine;
 namespace HoloToolkit.Unity.InputModule
 {
     /// <summary>
-    /// GazeStabilizer iterates over samples of Raycast data and
-    /// helps stabilize the user's gaze for precision targeting.
+    /// Module: GazeStabilizer for main menu
+    /// Team: HoloLens
+    /// Description: GazeStabilizer iterates over samples of Raycast data and helps stabilize the user's gaze for precision targeting.
+    /// Author: 
+    ///	Name:  Microsoft   Date:   Unknown
     /// </summary>
     public class GazeStabilizer : BaseRayStabilizer
     {

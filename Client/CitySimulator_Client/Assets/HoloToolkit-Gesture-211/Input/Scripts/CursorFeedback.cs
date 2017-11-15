@@ -3,8 +3,13 @@
 namespace Academy.HoloToolkit.Unity
 {
     /// <summary>
-    /// CursorFeedback class takes GameObjects to give cursor feedback
-    /// to users based on different states.
+    /// Module: CursorFeedback
+    /// Team: HoloLens
+    /// Description: CursorFeedback class takes GameObjects to give cursor feedback to users based on different states.
+    /// Author:
+    ///	 Name: Microsoft   Date: Unknown
+    /// Based on:
+    /// https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_211
     /// </summary>
     public class CursorFeedback : MonoBehaviour
     {
