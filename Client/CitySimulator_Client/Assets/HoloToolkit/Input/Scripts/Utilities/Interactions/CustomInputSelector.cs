@@ -13,7 +13,11 @@ using UnityEngine.VR;
 namespace HoloToolkit.Unity.InputModule
 {
     /// <summary>
-    /// This class is used to select input for the Editor and applications built outside of the UWP build target.
+    /// Module: StabilizationPlaneModifier
+    /// Team: HoloLens
+    /// Description:This class is used to select input for the Editor and applications built outside of the UWP build target.
+    /// Author: 
+    ///	Name:  Microsoft   Date:   Unknown
     /// </summary>
     public class CustomInputSelector : MonoBehaviour
     {

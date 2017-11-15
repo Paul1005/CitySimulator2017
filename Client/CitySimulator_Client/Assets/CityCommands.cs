@@ -9,7 +9,7 @@ using UnityEngine;
 /// Author: 
 ///	 Name: Microsoft   Date: Unknown
 /// Modified by:	
-///	 Name: Paul McCarlie    Change: Changed to accept only one command and to reset rotation when it is recieved
+///	 Name: George Lee   Change: Changed to accept only one command and to reset rotation when it is recieved
 /// Based on: 
 /// https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_212
 /// </summary>

@@ -15,9 +15,13 @@ using System.Collections.Generic;
 namespace HoloToolkit.Unity.InputModule
 {
     /// <summary>
-    /// Input source for gestures and interaction source information from the WSA APIs, which gives access to various system-supported gestures
+    /// Module: StabilizationPlaneModifier
+    /// Team: HoloLens
+    /// Description:Input source for gestures and interaction source information from the WSA APIs, which gives access to various system-supported gestures
     /// and positional information for the various inputs that Windows gestures supports.
     /// This is mostly a wrapper on top of GestureRecognizer and InteractionManager.
+    /// Author: 
+    ///	Name:  Microsoft   Date:   Unknown
     /// </summary>
     public class InteractionInputSource : BaseInputSource
     {

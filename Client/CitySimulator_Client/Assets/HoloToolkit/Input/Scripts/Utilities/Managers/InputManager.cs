@@ -13,8 +13,12 @@ using UnityEngine.Windows.Speech;
 namespace HoloToolkit.Unity.InputModule
 {
     /// <summary>
-    /// Input Manager is responsible for managing input sources and dispatching relevant events
+    /// Module: InputManager
+    /// Team: HoloLens
+    /// Description: Input Manager is responsible for managing input sources and dispatching relevant events
     /// to the appropriate input handlers. 
+    /// Author: 
+    ///	Name:  Microsoft   Date:   Unknown
     /// </summary>
     public class InputManager : Singleton<InputManager>
     {

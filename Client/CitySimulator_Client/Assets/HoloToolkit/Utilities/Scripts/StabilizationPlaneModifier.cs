@@ -15,7 +15,11 @@ using UnityEngine.VR.WSA;
 namespace HoloToolkit.Unity
 {
     /// <summary>
-    /// StabilizationPlaneModifier handles the setting of the stabilization plane in several ways.
+    /// Module: StabilizationPlaneModifier
+    /// Team: HoloLens
+    /// Description: StabilizationPlaneModifier handles the setting of the stabilization plane in several ways.
+    /// Author: 
+    ///	Name:  Microsoft   Date:   Unknown
     /// </summary>
     public class StabilizationPlaneModifier : Singleton<StabilizationPlaneModifier>
     {

@@ -3,6 +3,15 @@ using UnityEngine.VR.WSA.Input;
 
 namespace Academy.HoloToolkit.Unity
 {
+    /// <summary>
+    /// Module: GestureManager
+    /// Team: HoloLens
+    /// Description: GestureManager handles the various types of gestures used in the project, such as air tapping.
+    /// Author: 
+    ///	 Name:  Microsoft   Date:   Unknown
+    /// Based on:  
+    /// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_210
+    /// </summary>
     public class GestureManager : Singleton<GestureManager>
     {
         // Tap and Navigation gesture recognizer.
