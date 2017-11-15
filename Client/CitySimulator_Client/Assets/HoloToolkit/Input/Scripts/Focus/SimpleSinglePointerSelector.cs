@@ -6,7 +6,7 @@ using UnityEngine;
 namespace HoloToolkit.Unity.InputModule
 {
     /// <summary>
-    /// Module: GazeStabilizer for main scene
+    /// Module: SimpleSinglePointerSelector for main scene
     /// Team: HoloLens
     /// Description: Script shows how to create your own 'point and commit' style pointer which can steal cursor focus
     /// using a pointing ray supported motion controller.
