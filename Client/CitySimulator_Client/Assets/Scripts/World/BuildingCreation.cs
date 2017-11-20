@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using HoloToolkit.Examples.InteractiveElements;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +20,7 @@ using UnityEngine;
 /// </summary>
 public class BuildingCreation : MonoBehaviour {
 
+    public GameObject parentGrid;
 	public Transform building;
 	public Transform industryBuilding;
 	private GameObject[] planes;
@@ -27,7 +29,8 @@ public class BuildingCreation : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		planeTransform = GameObject.Find("Plane(Clone)").transform;
+        parentGrid = GameObject.Find("Grid");
+        planeTransform = GameObject.Find("Plane(Clone)").transform;
 		buildingManager = GameObject.Find ("BuildingManager");
 		createBuilding ();
 	}
@@ -75,8 +78,8 @@ public class BuildingCreation : MonoBehaviour {
 			}
 
             //attach an interactible script to each grid object
-            grid.AddComponent<Interactible>();
-            grid.GetComponent<MeshCollider>().convex = true;
+            grid.AddComponent<Interactive>();
+            grid.GetComponent<Interactive>().ParentObject = parentGrid;
             //grid.AddComponent<TapToPlaceParent>();
 			z++;
 			x++;

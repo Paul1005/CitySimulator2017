@@ -104,7 +104,10 @@ namespace HoloToolkit.Examples.InteractiveElements
         protected bool mAllowSelection = false;
 
         protected List<InteractiveWidget> mInteractiveWidgets = new List<InteractiveWidget>();
-
+        //added by paul
+        private Material[] defaultMaterials;
+        private TextMesh[] textMesh;
+        //
         protected virtual void Awake()
         {
             if (ParentObject == null)
@@ -120,6 +123,10 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// </summary>
         protected virtual void Start()
         {
+            //added by paul
+            defaultMaterials = GetComponent<Renderer>().materials;
+            textMesh = GetComponentsInChildren<TextMesh>();
+            //
             if (Keyword != "")
             {
                 mKeywordArray = new string[1] { Keyword };
@@ -189,6 +196,16 @@ namespace HoloToolkit.Examples.InteractiveElements
             SetKeywordListener(true);
 
             UpdateEffects();
+
+            //added by paul
+            for (int i = 0; i < defaultMaterials.Length; i++)
+            {
+                defaultMaterials[i].SetFloat("_Highlight", 0.25f);
+            }
+
+            textMesh[0].characterSize = 2.5f;
+            textMesh[1].characterSize = 2.5f;
+            //
         }
 
         /// <summary>
@@ -202,6 +219,15 @@ namespace HoloToolkit.Examples.InteractiveElements
             mCheckRollOff = true;
             SetKeywordListener(false);
             UpdateEffects();
+
+            //added by paul
+            for (int i = 0; i < defaultMaterials.Length; i++)
+            {
+                defaultMaterials[i].SetFloat("_Highlight", 0f);
+            }
+            textMesh[0].characterSize = 0;
+            textMesh[1].characterSize = 0;
+            //
         }
 
         private void SetKeywordListener(bool listen)
