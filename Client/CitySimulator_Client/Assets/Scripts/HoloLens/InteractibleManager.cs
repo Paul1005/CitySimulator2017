@@ -2,8 +2,13 @@
 using UnityEngine;
 
 /// <summary>
-/// InteractibleManager keeps tracks of which GameObject
-/// is currently in focus.
+/// Module: InteractableManager
+/// Team: HoloLens
+/// Description: InteractibleManager keeps tracks of which GameObject is currently in focus.
+/// Author: 
+///	 Name:  Microsoft   Date:   Unknown
+/// Based on:  
+/// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_210
 /// </summary>
 public class InteractibleManager : Singleton<InteractibleManager>
 {

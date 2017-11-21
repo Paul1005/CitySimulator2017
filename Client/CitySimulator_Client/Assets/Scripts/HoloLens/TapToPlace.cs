@@ -1,5 +1,17 @@
 ﻿using UnityEngine;
 
+
+/// <summary>
+/// Module: TapToPlace
+/// Team: HoloLens
+/// Description:    This class handles the on select command used by the GazeGestureManager script.
+/// Author: 
+///	 Name:  Microsoft   Date:   Unknown
+/// Modified by:	
+///	 Name:  Steven Ma   Change: changed selected object from parent to original object  Date: 2017-10-16
+/// Based on:  
+/// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_101
+/// </summary>
 public class TapToPlace : MonoBehaviour
 {
     bool placing = false;

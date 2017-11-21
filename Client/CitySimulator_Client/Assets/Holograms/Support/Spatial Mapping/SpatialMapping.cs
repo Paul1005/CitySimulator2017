@@ -1,6 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.VR.WSA;
 
+/// <summary>
+/// Module: SpatialMapping
+/// Team: HoloLens
+/// Description: Creates a spatial mapping wireframe
+/// Author: 
+///	 Name: Microsoft   Date: Unknown
+/// Based on:  
+/// https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_101
+/// </summary>
 public class SpatialMapping : MonoBehaviour {
 
     public static SpatialMapping Instance { private set; get; }

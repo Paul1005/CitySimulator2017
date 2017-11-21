@@ -5,8 +5,13 @@ using UnityEngine;
 namespace Academy.HoloToolkit.Unity
 {
     /// <summary>
-    /// GazeStabilizer iterates over samples of Raycast data and
-    /// helps stabilize the user's gaze for precision targeting.
+    /// Module: GazeStabilizer for main scene
+    /// Team: HoloLens
+    /// Description: GazeStabilizer iterates over samples of Raycast data and helps stabilize the user's gaze for precision targeting.
+    /// Author: 
+    ///	 Name:  Microsoft   Date:   Unknown
+    /// Based on:  
+    /// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_210
     /// </summary>
     public class GazeStabilizer : MonoBehaviour
     {

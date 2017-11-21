@@ -3,11 +3,15 @@
 namespace Academy.HoloToolkit.Unity
 {
     /// <summary>
-    /// CursorManager class takes Cursor GameObjects.
-    /// One that is on Holograms and another off Holograms.
-    /// Shows the appropriate Cursor when a Hologram is hit.
-    /// Places the appropriate Cursor at the hit position.
+    /// Module: CursorManager
+    /// Team: HoloLens
+    /// Description: CursorManager class takes Cursor GameObjects. One that is on Holograms and another off Holograms.
+    /// Shows the appropriate Cursor when a Hologram is hit.Places the appropriate Cursor at the hit position.
     /// Matches the Cursor normal to the hit surface.
+    /// Author: 
+    ///	 Name:  Microsoft   Date:   Unknown
+    /// Based on:  
+    /// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_210
     /// </summary>
     public class CursorManager : Singleton<CursorManager>
     {
