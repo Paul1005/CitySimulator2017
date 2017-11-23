@@ -75,8 +75,8 @@ public class BuildingCreation : MonoBehaviour {
 			}
 
             //attach an interactible script to each grid object
-            grid.AddComponent<Interactible>();
-            grid.GetComponent<MeshCollider>().convex = true;
+           // grid.AddComponent<Interactible>();
+            //grid.GetComponent<MeshCollider>().convex = true;
             //grid.AddComponent<TapToPlaceParent>();
 			z++;
 			x++;

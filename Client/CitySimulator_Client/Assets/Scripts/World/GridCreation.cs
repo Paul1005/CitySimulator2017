@@ -83,9 +83,9 @@ public class GridCreation : MonoBehaviour {
 				// apply text to the each plane
 				cellPrefab.GetChild (0).GetComponent<TextMesh> ().text = cityDataManager.getIndexOfXZ(x, z).ToString();
 				cellPrefab.GetChild (1).GetComponent<TextMesh> ().text = "(" + x + ", " + z + ")";
-                cellPrefab.GetChild(1).GetComponent<TextMesh>().characterSize = 0;
+                //cellPrefab.GetChild(1).GetComponent<TextMesh>().characterSize = 0;
                 cellPrefab.GetChild (0).GetComponent<TextMesh> ().text = cityDataManager.getIndexOfXZ(x, z).ToString();
-                cellPrefab.GetChild(0).GetComponent<TextMesh>().characterSize = 0;
+                //cellPrefab.GetChild(0).GetComponent<TextMesh>().characterSize = 0;
 
                 // put the tag plane on the object
                 cellPrefab.tag = "plane";
