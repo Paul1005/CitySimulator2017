@@ -64,7 +64,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1086611083439858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e852b8ea6948f5a4eac1085daf22ad2c, type: 3}
+  m_Script: {fileID: 11500000, guid: e939bcae42a0b5c4ebacde61a47cbf3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114442471072627954
@@ -93,10 +93,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1086611083439858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a6af9fcc3a260d43b5541e1cb970480, type: 3}
+  m_Script: {fileID: 11500000, guid: ca0e1efe7fe23de4880c8b69d495f4b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FingerPressedSound: {fileID: 0}
+  FingerPressedSound: {fileID: 8300000, guid: 48e547d39c1091947bc929783d8f33f3, type: 3}
 --- !u!114 &114689197729750888
 MonoBehaviour:
   m_ObjectHideFlags: 1
