@@ -60,7 +60,7 @@ public class CharacterCreation : MonoBehaviour {
 				Transform human = 
 					Instantiate (character,
 						new Vector3 (road.transform.position.x, 0, road.transform.position.z),
-						Quaternion.identity,characterManager.transform) as Transform;
+						Quaternion.identity, road.transform) as Transform;
 
 				Instantiate(character,
 					new Vector3(road.transform.position.x,
