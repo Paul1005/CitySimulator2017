@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.VR.WSA.Input;
 
 /// <summary>
 /// Module: GUIMouseEventManager
@@ -17,6 +18,33 @@ public class GUIMouseEventManager : MonoBehaviour
 {
 
     private List<GUIObjectInteractive> Selections = new List<GUIObjectInteractive>();  // the list of selected objects
+
+    // Tap gesture recognizer.
+    public GestureRecognizer gestureRecognizer { get; private set; }
+
+    private void Awake()
+    {
+        // 2.b: Instantiate the NavigationRecognizer.
+        gestureRecognizer = new GestureRecognizer();
+
+        // 2.b: Add Tap and NavigationX GestureSettings to the NavigationRecognizer's RecognizableGestures.
+        gestureRecognizer.SetRecognizableGestures(
+            GestureSettings.Tap);
+        gestureRecognizer.StartCapturingGestures();
+        // 2.b: Register for the TappedEvent.
+        gestureRecognizer.TappedEvent += (source, tapCount, ray) =>
+        {
+            print("hi");
+            GameObject focusedObject = InteractibleManager.Instance.FocusedGameObject;
+            var interact = focusedObject.transform.GetComponent<GUIObjectInteractive>(); // Check "Interactive" module, if Null, then return
+            print(interact);
+            if (interact == null)
+                return;
+
+            Selections.Add(interact);
+            interact.Select();
+        };
+    }
 
     // Update is called once per frame
     void Update()

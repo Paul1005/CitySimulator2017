@@ -21,6 +21,12 @@ public class Interactible : MonoBehaviour
     private Material[] defaultMaterials;
     private TextMesh[] textMesh;
 
+    private bool _Selected = false;   // check if the unit gets selected
+
+    public bool Selected { get { return _Selected; } }
+
+    public bool Swap = false; // to change selection status in editor
+
     void Start()
     {
         defaultMaterials = GetComponent<Renderer>().materials;
