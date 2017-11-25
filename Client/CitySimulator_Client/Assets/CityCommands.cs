@@ -30,4 +30,14 @@ public class CityCommands : MonoBehaviour {
         this.transform.localRotation = originalRotation;
     }
 
+    void DeSelect()
+    {
+        List<GUIObjectInteractive> Selections = GUIMouseEventManager.Selections;
+        foreach (var sel in Selections)
+        {
+            if (sel != null) sel.Deselect();
+        }
+        Selections.Clear();
+    }
+
 }

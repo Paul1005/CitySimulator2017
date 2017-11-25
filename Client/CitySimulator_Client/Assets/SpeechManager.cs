@@ -25,7 +25,11 @@ public class SpeechManager : MonoBehaviour {
             // Call the OnReset method on every descendant object.
             this.BroadcastMessage("OnReset");
         });
-
+        keywords.Add("Clear", () =>
+        {
+            // Call the DeSelect method on every descendant object.
+            this.BroadcastMessage("DeSelect");
+        });
         // Tell the KeywordRecognizer about our keywords.
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
 
@@ -37,6 +41,7 @@ public class SpeechManager : MonoBehaviour {
     private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
     {
         System.Action keywordAction;
+        print(args.text);
         if (keywords.TryGetValue(args.text, out keywordAction))
         {
             keywordAction.Invoke();
