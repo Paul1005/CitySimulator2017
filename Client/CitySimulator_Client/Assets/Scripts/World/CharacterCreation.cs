@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 /// <summary>
 /// Module: CharacterCreation
 /// Team: Client
@@ -11,7 +10,9 @@ using UnityEngine;
 ///	 Name: Dongwon(Shawn) Kim   Date: 2017-10-02
 /// Modified by:	
 ///	 Name: Dongwon(Shawn) Kim   Change: initiate belongs to CharacterManager Date: 2017-10-31
+///	 Name: Paul McCarlie        Change: Parented character to grid
 /// Based on:  BuildingCreation.cs
+/// </summary>
 public class CharacterCreation : MonoBehaviour {
 	// population of the city
 	int population;
@@ -30,7 +31,7 @@ public class CharacterCreation : MonoBehaviour {
 	/// Start this instance.
 	/// </summary>
 	void Start () {
-		population = 10;
+		population = 1;
 		characterManager = GameObject.Find ("CharacterManager");
 		
 	}
@@ -40,13 +41,14 @@ public class CharacterCreation : MonoBehaviour {
 	/// </summary>
 	void Update () {
 		
-		CreateCharacter();
+		createCharacter();
 
 	}
+
 	/// <summary>
 	/// Creates the character.
 	/// </summary>
-	void CreateCharacter(){
+	void createCharacter(){
 		planes = GameObject.FindGameObjectsWithTag("plane");
 
 		foreach (GameObject road in planes) {
@@ -55,14 +57,20 @@ public class CharacterCreation : MonoBehaviour {
 			}
 
 			if (road.transform.GetChild(0).gameObject.GetComponent<TextMesh>().text == "0") {
+				Transform human = 
+					Instantiate (character,
+						new Vector3 (road.transform.position.x, 0, road.transform.position.z),
+						Quaternion.identity, road.transform) as Transform;
 
 				Instantiate(character,
 					new Vector3(road.transform.position.x,
-						0,
+                        road.transform.position.y,
 						road.transform.position.z),
 					Quaternion.identity,
-					characterManager.transform);
+					road.transform);
 				population--;
+				Debug.Log ("Name of Character: " + character.name);
+				human.gameObject.AddComponent<CharacterMove> ();
 			}
 
 		}

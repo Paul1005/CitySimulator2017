@@ -11,8 +11,9 @@ using UnityEngine;
 ///	 Name: Dongwon(Shawn) Kim   Date: 2017-09-28
 ///  Name: Andrew Lam			Date: 2017-09-28
 /// Modified by:	
-///	 Name: Andrew Lam   Change: Change the reference of the building	Date: 2017-10-17
-///	 Name: Shawn  Kim   Change: Append objects to parent 				Date: 2017-10-20
+///	 Name: Andrew Lam       Change: Change the reference of the building	    Date: 2017-10-17
+///	 Name: Shawn  Kim       Change: Append objects to parent 				    Date: 2017-10-20
+///	 Name: Paul McCarlie    Change: Change parent from buidling manager to grid Date: 2017-11-01
 /// Based on:  N/A
 /// https://docs.unity3d.com/ScriptReference/Material-color.html
 /// </summary>
@@ -22,13 +23,13 @@ public class BuildingCreation : MonoBehaviour {
 	public Transform industryBuilding;
 	private GameObject[] planes;
 	private Transform planeTransform;
-	public GameObject parentBuilding;
+	public GameObject buildingManager;
 
 	// Use this for initialization
 	void Start () {
-		planeTransform = GameObject.Find("Plane(Clone)").transform;
-		parentBuilding = GameObject.Find ("BuildingManager");
-		CreateBuilding ();
+		// planeTransform = GameObject.Find("Plane(Clone)").transform;
+		buildingManager = GameObject.Find ("BuildingManager");
+		createBuilding ();
 	}
 
 	// Update is called once per frame
@@ -36,16 +37,16 @@ public class BuildingCreation : MonoBehaviour {
 	}
 
 	// Create building model
-	void CreateBuilding () {
+	void createBuilding () {
 		planes = GameObject.FindGameObjectsWithTag ("plane");
 		int x = 0;
 		int z = 0;
 
-		building.localScale = planeTransform.localScale;
-		building.localScale -= new Vector3 (0.15f, 0, 0.15f);
+		// building.localScale = planeTransform.localScale;
+		// building.localScale -= new Vector3 (0.25f, 0.20f, 0.15f);
 
-		industryBuilding.localScale = planeTransform.localScale;
-		industryBuilding.localScale -= new Vector3 (0.15f, 0.30f, 0.30f);
+		// industryBuilding.localScale = planeTransform.localScale;
+		// industryBuilding.localScale -= new Vector3 (0.15f, 0.35f, 0.30f);
 
 		foreach(GameObject grid in planes) {
 			Transform grid2 = grid.transform;
@@ -55,9 +56,9 @@ public class BuildingCreation : MonoBehaviour {
 
 				//Creating each cell of grid
 				Instantiate (building,
-							new Vector3 (grid.transform.position.x, 0, grid.transform.position.z),
+							new Vector3 (grid.transform.position.x, grid.transform.position.y, grid.transform.position.z),
 							Quaternion.identity, 
-							parentBuilding.transform);
+							grid.transform);
 			}
 
 			//Industrial building objects
@@ -70,9 +71,13 @@ public class BuildingCreation : MonoBehaviour {
 								grid.transform.position.y,
 								grid.transform.position.z),
 								Quaternion.identity,
-								parentBuilding.transform);
+								grid.transform);
 			}
 
+            //attach an interactible script to each grid object
+           //grid.AddComponent<Interactible>();
+            //grid.GetComponent<MeshCollider>().convex = true;
+            //grid.AddComponent<TapToPlaceParent>();
 			z++;
 			x++;
 		}
