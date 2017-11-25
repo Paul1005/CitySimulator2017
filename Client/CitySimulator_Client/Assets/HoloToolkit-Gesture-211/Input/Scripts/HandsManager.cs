@@ -70,11 +70,13 @@ namespace Academy.HoloToolkit.Unity
 
         private void InteractionManager_SourceDetected(InteractionSourceState hand)
         {
+            print("sourceDetected");
             HandDetected = true;
         }
 
         private void InteractionManager_SourceLost(InteractionSourceState hand)
         {
+            print("sourcelost");
             HandDetected = false;
 
             // 2.a: Reset FocusedGameObject.
@@ -83,12 +85,11 @@ namespace Academy.HoloToolkit.Unity
 
         private void InteractionManager_SourcePressed(InteractionSourceState hand)
         {
+            print(InteractibleManager.Instance.FocusedGameObject);
             if (InteractibleManager.Instance.FocusedGameObject != null)
             {
                 // Play a select sound if we have an audio source and are not targeting an asset with a select sound.
-                if (audioSource != null && !audioSource.isPlaying &&
-                    (InteractibleManager.Instance.FocusedGameObject.GetComponent<Interactible>() != null &&
-                    InteractibleManager.Instance.FocusedGameObject.GetComponent<Interactible>().TargetFeedbackSound == null))
+                if (audioSource != null && !audioSource.isPlaying && InteractibleManager.Instance.FocusedGameObject.GetComponent<GUIObjectInteractive>() != null)
                 {
                     audioSource.Play();
                 }

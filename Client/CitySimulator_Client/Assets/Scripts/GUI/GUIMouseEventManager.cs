@@ -10,8 +10,10 @@ using UnityEngine.VR.WSA.Input;
 ///     Name: Benjamin Hao Date: 2017-10-24
 /// Modified by:    
 ///     Name: Benjamin Hao   Change: add skip functionality to increase performance Date: 2017-10-30
+///     Name: Paul McCarlie  Change: add air tap functionality for HoloLens         Date: 2017-11-24
 /// Based on: https://docs.unity3d.com/ScriptReference/Input.GetMouseButtonDown.html
 ///           https://docs.unity3d.com/ScriptReference/Physics.Raycast.html
+///           GestureManager.cs
 /// </summary>
 
 public class GUIMouseEventManager : MonoBehaviour
@@ -22,6 +24,8 @@ public class GUIMouseEventManager : MonoBehaviour
     // Tap gesture recognizer.
     public GestureRecognizer gestureRecognizer { get; private set; }
 
+    public bool isEnabled;
+    //Use for capturing HoloLens gesture
     private void Awake()
     {
         // 2.b: Instantiate the NavigationRecognizer.
@@ -34,21 +38,25 @@ public class GUIMouseEventManager : MonoBehaviour
         // 2.b: Register for the TappedEvent.
         gestureRecognizer.TappedEvent += (source, tapCount, ray) =>
         {
-            GameObject focusedObject = InteractibleManager.Instance.FocusedGameObject;
-            var interact = focusedObject.transform.GetComponent<GUIObjectInteractive>(); // Check "Interactive" module, if Null, then return
-            //print(interact);
-            if (interact != null)
+            print(isEnabled);
+            if (isEnabled)
             {
-                if (Selections.Count > 0)
+                GameObject focusedObject = InteractibleManager.Instance.FocusedGameObject;
+                var interact = focusedObject.transform.GetComponent<GUIObjectInteractive>(); // Check "Interactive" module, if Null, then return
+                                                                                             //print(interact);
+                if (interact != null)
                 {
-                    foreach (var sel in Selections)
+                    if (Selections.Count > 0)
                     {
-                        if (sel != null) sel.Deselect();
+                        foreach (var sel in Selections)
+                        {
+                            if (sel != null) sel.Deselect();
+                        }
+                        Selections.Clear();
                     }
-                    Selections.Clear();
+                    Selections.Add(interact);
+                    interact.Select();
                 }
-                Selections.Add(interact);
-                interact.Select();
             }
         };
     }

@@ -15,11 +15,18 @@ using UnityEngine;
 /// </summary>
 public class CityCommands : MonoBehaviour {
     Quaternion originalRotation;
-
+    GestureAction gestureAction;
+    GUIMouseEventManager eventManager;
     // Use this for initialization
+    private AudioSource audioSource;
+    public AudioClip rotateMode;
+    public AudioClip selectMode;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         originalRotation = this.transform.localRotation;
+        gestureAction = GetComponent<GestureAction>();
+        eventManager = GetComponent<GUIMouseEventManager>();
     }
 
     // Called by SpeechManager when the user says the "Reset world" command
@@ -38,6 +45,22 @@ public class CityCommands : MonoBehaviour {
             if (sel != null) sel.Deselect();
         }
         Selections.Clear();
+    }
+
+    void EnableRotation()
+    {
+        gestureAction.enabled = true;
+        eventManager.isEnabled = false;
+        audioSource.clip = rotateMode;
+        audioSource.Play();
+    }
+
+    private void EnableSelection()
+    {
+        gestureAction.enabled = false;
+        eventManager.isEnabled = true;
+        audioSource.clip = selectMode;
+        audioSource.Play();
     }
 
 }

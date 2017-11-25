@@ -30,6 +30,27 @@ public class SpeechManager : MonoBehaviour {
             // Call the DeSelect method on every descendant object.
             this.BroadcastMessage("DeSelect");
         });
+        keywords.Add("Enable Rotation", () =>
+        {
+            // Call the Enable Rotation method on every descendant object.
+            this.BroadcastMessage("EnableRotation");
+        });
+        keywords.Add("Enable Selection", () =>
+        {
+            // Call the Enable Selection method on every descendant object.
+            this.BroadcastMessage("EnableSelection");
+        });
+        keywords.Add("Move city", () =>
+        {
+            // Call the Enable Selection method on every descendant object.
+            this.BroadcastMessage("OnSelect");
+        });
+        keywords.Add("Place city", () =>
+        {
+            // Call the Enable Selection method on every descendant object.
+            this.BroadcastMessage("OnSelect");
+        });
+
         // Tell the KeywordRecognizer about our keywords.
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
 

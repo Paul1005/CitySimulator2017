@@ -111,11 +111,11 @@ namespace Academy.HoloToolkit.Unity
             if (!hand.pressed ||
                 HandsManager.Instance.FocusedGameObject == null ||
                 (HandsManager.Instance.FocusedGameObject != null &&
-                HandsManager.Instance.FocusedGameObject.GetComponent<Interactible>() == null))
+                HandsManager.Instance.FocusedGameObject.GetComponent<GUIObjectInteractive>() == null))
             {
                 print(hand.pressed);
                 print(HandsManager.Instance.FocusedGameObject);
-                print(HandsManager.Instance.FocusedGameObject.GetComponent<Interactible>());
+                print(HandsManager.Instance.FocusedGameObject.GetComponent<GUIObjectInteractive>());
 
                 return;
             }

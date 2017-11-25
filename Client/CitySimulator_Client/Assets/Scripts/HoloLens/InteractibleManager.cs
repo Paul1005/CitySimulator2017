@@ -41,8 +41,9 @@ public class InteractibleManager : Singleton<InteractibleManager>
         {
             FocusedGameObject = null;
         }
-
-        if (FocusedGameObject != oldFocusedGameObject)
+        print(FocusedGameObject.GetComponent<Interactible>());
+        print(FocusedGameObject);
+       /* if (FocusedGameObject != oldFocusedGameObject)
         {
             ResetFocusedInteractible();
 
@@ -53,7 +54,7 @@ public class InteractibleManager : Singleton<InteractibleManager>
                     FocusedGameObject.SendMessage("GazeEntered");
                 }
             }
-        }
+        }*/
     }
 
     private void ResetFocusedInteractible()

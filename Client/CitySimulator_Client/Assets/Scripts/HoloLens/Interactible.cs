@@ -18,8 +18,8 @@ public class Interactible : MonoBehaviour
     public AudioClip TargetFeedbackSound;
     private AudioSource audioSource;
 
-    private Material[] defaultMaterials;
-    private TextMesh[] textMesh;
+   // private Material[] defaultMaterials;
+   // private TextMesh[] textMesh;
 
     private bool _Selected = false;   // check if the unit gets selected
 
@@ -29,8 +29,8 @@ public class Interactible : MonoBehaviour
 
     void Start()
     {
-        defaultMaterials = GetComponent<Renderer>().materials;
-        textMesh = GetComponentsInChildren<TextMesh>();
+        //defaultMaterials = GetComponent<Renderer>().materials;
+        //textMesh = GetComponentsInChildren<TextMesh>();
         // Add a BoxCollider if the interactible does not contain one.
         Collider collider = GetComponentInChildren<Collider>();
         if (collider == null)
@@ -39,7 +39,7 @@ public class Interactible : MonoBehaviour
         }
 
 
-        EnableAudioHapticFeedback();
+       // EnableAudioHapticFeedback();
     }
 
     private void EnableAudioHapticFeedback()
@@ -61,7 +61,7 @@ public class Interactible : MonoBehaviour
     }
 
     /* TODO: DEVELOPER CODING EXERCISE 2.d */
-
+    /*
     void GazeEntered()
     {
         //print(defaultMaterials.Length);
@@ -101,8 +101,8 @@ public class Interactible : MonoBehaviour
             audioSource.Play();
         }
 
-        /* TODO: DEVELOPER CODING EXERCISE 6.a */
+        /* TODO: DEVELOPER CODING EXERCISE 6.a 
         // 6.a: Handle the OnSelect by sending a PerformTagAlong message.
         //this.SendMessage("PerformTagAlong");
-    }
+    }*/
 }

@@ -188,12 +188,12 @@ namespace Academy.HoloToolkit.Unity
 
         private void NavigationRecognizer_TappedEvent(InteractionSourceKind source, int tapCount, Ray ray)
         {
-            GameObject focusedObject = InteractibleManager.Instance.FocusedGameObject;
+           /* GameObject focusedObject = InteractibleManager.Instance.FocusedGameObject;
 
             if (focusedObject != null)
             {
                 focusedObject.SendMessageUpwards("OnSelect");
-            }
+            }*/
         }
     }
 }
