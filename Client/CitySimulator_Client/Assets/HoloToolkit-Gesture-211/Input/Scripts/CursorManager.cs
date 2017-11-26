@@ -9,7 +9,8 @@ namespace Academy.HoloToolkit.Unity
     /// Shows the appropriate Cursor when a Hologram is hit.Places the appropriate Cursor at the hit position.
     /// Matches the Cursor normal to the hit surface.
     /// Author: 
-    ///	 Name:  Microsoft   Date:   Unknown
+    ///	 Name:  Microsoft   Date:   Unknown 
+    ///	 Name:  Paul McCarlie      Change: Changed interactible to  GUIObjectInteractive Date: 2017-11-25
     /// Based on:  
     /// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_210
     /// </summary>

@@ -10,6 +10,8 @@ namespace Academy.HoloToolkit.Unity
     /// Description: HandsManager keeps track of when a hand is detected.
     /// Author: 
     ///	 Name:  Microsoft   Date:   Unknown
+    /// Modified by:	
+    ///	 Name:  Paul McCarlie      Change: Changed interactible to  GUIObjectInteractive Date: 2017-11-25
     /// Based on:  
     /// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_210
     /// </summary>

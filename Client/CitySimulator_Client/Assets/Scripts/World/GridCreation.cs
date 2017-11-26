@@ -13,6 +13,7 @@ using UnityEngine;
 ///  Name: Dongwon(Shawn) Kim   Change:	Adding data by CityDataManager  Date: 2017-10-18
 ///  Name: Paul McCarlie        Change: Grid now generates with starting point at centre    Date: 2017-11-09
 ///  Name: Dongwon(Shawn) Kim   Change:	turnGrid function        		Date: 2017-11-13
+///	 Name:  Paul McCarlie       Change: Text no longer needs to be set to zero Date: 2017-11-25
 /// Based on:  
 /// 	https://docs.unity3d.com/ScriptReference/Object.Instantiate.html
 /// 	http://answers.unity3d.com/questions/718778/trying-to-create-a-grid.html

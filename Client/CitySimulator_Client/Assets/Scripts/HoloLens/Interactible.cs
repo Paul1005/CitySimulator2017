@@ -8,7 +8,8 @@
 /// Author: 
 ///	 Name:  Microsoft   Date:   Unknown
 /// Modified by:	
-///	 Name:  Paul McCarlie   Change: Gazing at object will now make tile text visible, and invisible when gazing away  Date: 2017-10-06
+///	 Name:  Paul McCarlie   Change: Gazing at object will now make tile text visible, and invisible when gazing away    Date: 2017-10-06
+///	 Name:  Paul McCarlie   Change: Class is no longer used, most functionality commented out                           Date: 2017-11-26
 /// Based on:  
 /// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_210
 /// </summary>

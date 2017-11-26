@@ -10,7 +10,9 @@ using UnityEngine.Windows.Speech;
 /// Author:
 ///	 Name:  Microsoft   Date:   Unknown
 /// Modified by:
-///	 Name:  George Lee   Change: Stripped class down to accept only one command for the time being  Date: 2017-11-01
+///	 Name:  George Lee      Change: Stripped class down to accept only one command for the time being      Date: 2017-11-01
+///	 Name:  George Lee      Change: Added move city command for spacial mapping                            Date: 2017-11-25
+///	 Name:  Paul McCarlie   Change: Added mode switching for roration and selection for the time being     Date: 2017-11-01
 /// Based on:
 /// https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_212
 /// </summary>
