@@ -54,7 +54,7 @@ public class InteractibleManager : Singleton<InteractibleManager>
                     FocusedGameObject.SendMessage("GazeEntered");
                 }
             }
-        }*/
+        }
     }
 
     private void ResetFocusedInteractible()
@@ -65,6 +65,6 @@ public class InteractibleManager : Singleton<InteractibleManager>
             {
                 oldFocusedGameObject.SendMessage("GazeExited");
             }
-        }
+        }*/
     }
 }

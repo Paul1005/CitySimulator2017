@@ -41,7 +41,7 @@ namespace Academy.HoloToolkit.Unity
         {
             int maxLayers = 31;
             // To protect apps that don't have an Interactible layer in their project.
-            int interactibleLayer = LayerMask.NameToLayer("Interactible");
+            int interactibleLayer = LayerMask.NameToLayer("GUIObjectInteractive");
 
             if (interactibleLayer < 0 || interactibleLayer > maxLayers)
             {
@@ -53,11 +53,11 @@ namespace Academy.HoloToolkit.Unity
             for (int i = 0; i < maxLayers; i++)
             {
                 // Ensure the Interactible objects do not collide with other layers.
-                Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Interactible"), i, true);
+                Physics.IgnoreLayerCollision(LayerMask.NameToLayer("GUIObjectInteractive"), i, true);
             }
 
             // Ensures the Cursor can collide with the Interactible objects only.
-            Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Interactible"), LayerMask.NameToLayer("Cursor"), false);
+            Physics.IgnoreLayerCollision(LayerMask.NameToLayer("GUIObjectInteractive"), LayerMask.NameToLayer("Cursor"), false);
         }
 
         void Update()
