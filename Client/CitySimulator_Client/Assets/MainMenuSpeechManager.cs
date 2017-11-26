@@ -6,20 +6,22 @@ using UnityEngine.Windows.Speech;
 
 public class MainMenuSpeechManager : MonoBehaviour
 {
-
-    KeywordRecognizer keywordRecognizer = null;
-    Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
+    private KeywordRecognizer keywordRecognizer = null;
+    private Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 
     // Use this for initialization
-    void Start()
+    private void Start()
     {
         keywords.Add("Play", () =>
         {
+            Debug.LogWarning("Voice play");
+            this.SendMessage("playGameBtn");
             this.BroadcastMessage("playGameBtn");
         });
 
         keywords.Add("Exit", () =>
         {
+            Debug.LogWarning("Voice exit");
             this.BroadcastMessage("exitGameBtn");
         });
 
@@ -40,4 +42,3 @@ public class MainMenuSpeechManager : MonoBehaviour
         }
     }
 }
-
