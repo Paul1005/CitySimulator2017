@@ -54,7 +54,7 @@ namespace Academy.HoloToolkit.Unity
         {
             // If this hologram has an audio clip, add an AudioSource with this clip.
             if (FingerPressedSound != null)
-            {
+           {
                 audioSource = GetComponent<AudioSource>();
                 if (audioSource == null)
                 {
@@ -64,7 +64,7 @@ namespace Academy.HoloToolkit.Unity
                 audioSource.clip = FingerPressedSound;
                 audioSource.playOnAwake = false;
                 audioSource.spatialBlend = 1;
-                audioSource.dopplerLevel = 0;
+                audioSource.dopplerLevel = 0; 
             }
         }
 

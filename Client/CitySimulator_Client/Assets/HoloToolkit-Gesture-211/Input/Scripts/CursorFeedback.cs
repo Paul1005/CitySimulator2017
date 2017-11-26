@@ -88,6 +88,8 @@ namespace Academy.HoloToolkit.Unity
 
         private void UpdateHandDetectedState()
         {
+            print(CursorManager.Instance);
+            print(handDetectedGameObject);
             if (handDetectedGameObject == null || CursorManager.Instance == null)
             {
                 return;
@@ -115,10 +117,10 @@ namespace Academy.HoloToolkit.Unity
 
         private void UpdateScrollDetectedState()
         {
-            print(scrollDetectedGameObject);
+           /* print(scrollDetectedGameObject);
             print(FocusedInteractible);
             print(GestureManager.Instance.ActiveRecognizer);
-            print(GestureManager.Instance.NavigationRecognizer);
+            print(GestureManager.Instance.NavigationRecognizer);*/
             if (scrollDetectedGameObject == null)
             {
                 return;

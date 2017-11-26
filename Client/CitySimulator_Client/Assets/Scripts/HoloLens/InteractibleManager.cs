@@ -41,8 +41,8 @@ public class InteractibleManager : Singleton<InteractibleManager>
         {
             FocusedGameObject = null;
         }
-        print(FocusedGameObject.GetComponent<Interactible>());
-        print(FocusedGameObject);
+        //print(FocusedGameObject.GetComponent<Interactible>());
+       // print(FocusedGameObject);
        /* if (FocusedGameObject != oldFocusedGameObject)
         {
             ResetFocusedInteractible();

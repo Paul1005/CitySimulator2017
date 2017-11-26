@@ -13,7 +13,8 @@ using UnityEngine;
 /// Based on: 
 /// https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_212
 /// </summary>
-public class CityCommands : MonoBehaviour {
+public class CityCommands : MonoBehaviour
+{
     Quaternion originalRotation;
     GestureAction gestureAction;
     GUIMouseEventManager eventManager;
@@ -24,6 +25,10 @@ public class CityCommands : MonoBehaviour {
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
         originalRotation = this.transform.localRotation;
         gestureAction = GetComponent<GestureAction>();
         eventManager = GetComponent<GUIMouseEventManager>();
@@ -52,6 +57,9 @@ public class CityCommands : MonoBehaviour {
         gestureAction.enabled = true;
         eventManager.isEnabled = false;
         audioSource.clip = rotateMode;
+        audioSource.playOnAwake = false;
+        audioSource.spatialBlend = 1;
+        audioSource.dopplerLevel = 0;
         audioSource.Play();
     }
 
@@ -60,6 +68,9 @@ public class CityCommands : MonoBehaviour {
         gestureAction.enabled = false;
         eventManager.isEnabled = true;
         audioSource.clip = selectMode;
+        audioSource.playOnAwake = false;
+        audioSource.spatialBlend = 1;
+        audioSource.dopplerLevel = 0;
         audioSource.Play();
     }
 
