@@ -9,7 +9,8 @@ namespace Academy.HoloToolkit.Unity
     /// Shows the appropriate Cursor when a Hologram is hit.Places the appropriate Cursor at the hit position.
     /// Matches the Cursor normal to the hit surface.
     /// Author: 
-    ///	 Name:  Microsoft   Date:   Unknown
+    ///	 Name:  Microsoft   Date:   Unknown 
+    ///	 Name:  Paul McCarlie      Change: Changed interactible to  GUIObjectInteractive Date: 2017-11-25
     /// Based on:  
     /// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_210
     /// </summary>
@@ -41,7 +42,7 @@ namespace Academy.HoloToolkit.Unity
         {
             int maxLayers = 31;
             // To protect apps that don't have an Interactible layer in their project.
-            int interactibleLayer = LayerMask.NameToLayer("Interactible");
+            int interactibleLayer = LayerMask.NameToLayer("GUIObjectInteractive");
 
             if (interactibleLayer < 0 || interactibleLayer > maxLayers)
             {
@@ -53,11 +54,11 @@ namespace Academy.HoloToolkit.Unity
             for (int i = 0; i < maxLayers; i++)
             {
                 // Ensure the Interactible objects do not collide with other layers.
-                Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Interactible"), i, true);
+                Physics.IgnoreLayerCollision(LayerMask.NameToLayer("GUIObjectInteractive"), i, true);
             }
 
             // Ensures the Cursor can collide with the Interactible objects only.
-            Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Interactible"), LayerMask.NameToLayer("Cursor"), false);
+            Physics.IgnoreLayerCollision(LayerMask.NameToLayer("GUIObjectInteractive"), LayerMask.NameToLayer("Cursor"), false);
         }
 
         void Update()

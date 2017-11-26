@@ -9,6 +9,7 @@ namespace Academy.HoloToolkit.Unity
     /// Description: Show a hand guidance indicator when the user's hand is close to leaving the camera's view.
     /// Author: 
     ///	 Name:  Microsoft   Date:   Unknown
+    ///	 Name:  Paul McCarlie      Change: Changed interactible to  GUIObjectInteractive Date: 2017-11-25
     /// Based on:  
     /// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_211
     /// </summary>
@@ -33,6 +34,7 @@ namespace Academy.HoloToolkit.Unity
 
         void Start()
         {
+            print("start");
             // Register for hand and finger events to know where your hand
             // is being tracked and what state it is in.
             InteractionManager.SourceLost += InteractionManager_SourceLost;
@@ -75,6 +77,7 @@ namespace Academy.HoloToolkit.Unity
                 handGuidanceIndicatorGameObject.transform.position = position;
                 handGuidanceIndicatorGameObject.transform.rotation = rotation * defaultHandGuidanceRotation;
                 handGuidanceIndicatorGameObject.SetActive(true);
+                print("active");
             }
         }
 
@@ -104,12 +107,17 @@ namespace Academy.HoloToolkit.Unity
         // Call these events from HandsManager. This fires when the hand is moved.
         private void InteractionManager_SourceUpdated(InteractionSourceState hand)
         {
+            print("updated");
             // Only display hand indicators when we have targeted an interactible and the hand is in a pressed state.
             if (!hand.pressed ||
                 HandsManager.Instance.FocusedGameObject == null ||
                 (HandsManager.Instance.FocusedGameObject != null &&
-                HandsManager.Instance.FocusedGameObject.GetComponent<Interactible>() == null))
+                HandsManager.Instance.FocusedGameObject.GetComponent<GUIObjectInteractive>() == null))
             {
+                print(hand.pressed);
+                print(HandsManager.Instance.FocusedGameObject);
+                print(HandsManager.Instance.FocusedGameObject.GetComponent<GUIObjectInteractive>());
+
                 return;
             }
 
@@ -120,9 +128,12 @@ namespace Academy.HoloToolkit.Unity
             }
             else if (currentlyTrackedHand.Value != hand.source.id)
             {
+                print('2');
                 // This hand is not the currently tracked hand, do not drawn a guidance indicator for this hand.
                 return;
             }
+
+            print(hand.properties.sourceLossRisk);
 
             // Start showing an indicator to move your hand toward the center of the view.
             if (hand.properties.sourceLossRisk > HandGuidanceThreshold)

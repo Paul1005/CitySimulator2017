@@ -8,7 +8,8 @@
 /// Author: 
 ///	 Name:  Microsoft   Date:   Unknown
 /// Modified by:	
-///	 Name:  Paul McCarlie   Change: Gazing at object will now make tile text visible, and invisible when gazing away  Date: 2017-10-06
+///	 Name:  Paul McCarlie   Change: Gazing at object will now make tile text visible, and invisible when gazing away    Date: 2017-10-06
+///	 Name:  Paul McCarlie   Change: Class is no longer used, most functionality commented out                           Date: 2017-11-26
 /// Based on:  
 /// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_210
 /// </summary>
@@ -18,13 +19,19 @@ public class Interactible : MonoBehaviour
     public AudioClip TargetFeedbackSound;
     private AudioSource audioSource;
 
-    private Material[] defaultMaterials;
-    private TextMesh[] textMesh;
+   // private Material[] defaultMaterials;
+   // private TextMesh[] textMesh;
+
+    private bool _Selected = false;   // check if the unit gets selected
+
+    public bool Selected { get { return _Selected; } }
+
+    public bool Swap = false; // to change selection status in editor
 
     void Start()
     {
-        defaultMaterials = GetComponent<Renderer>().materials;
-        textMesh = GetComponentsInChildren<TextMesh>();
+        //defaultMaterials = GetComponent<Renderer>().materials;
+        //textMesh = GetComponentsInChildren<TextMesh>();
         // Add a BoxCollider if the interactible does not contain one.
         Collider collider = GetComponentInChildren<Collider>();
         if (collider == null)
@@ -33,7 +40,7 @@ public class Interactible : MonoBehaviour
         }
 
 
-        EnableAudioHapticFeedback();
+       // EnableAudioHapticFeedback();
     }
 
     private void EnableAudioHapticFeedback()
@@ -55,7 +62,7 @@ public class Interactible : MonoBehaviour
     }
 
     /* TODO: DEVELOPER CODING EXERCISE 2.d */
-
+    /*
     void GazeEntered()
     {
         //print(defaultMaterials.Length);
@@ -95,8 +102,8 @@ public class Interactible : MonoBehaviour
             audioSource.Play();
         }
 
-        /* TODO: DEVELOPER CODING EXERCISE 6.a */
+        /* TODO: DEVELOPER CODING EXERCISE 6.a 
         // 6.a: Handle the OnSelect by sending a PerformTagAlong message.
         //this.SendMessage("PerformTagAlong");
-    }
+    }*/
 }

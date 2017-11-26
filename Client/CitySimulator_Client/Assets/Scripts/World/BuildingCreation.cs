@@ -27,7 +27,7 @@ public class BuildingCreation : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		planeTransform = GameObject.Find("Plane(Clone)").transform;
+		// planeTransform = GameObject.Find("Plane(Clone)").transform;
 		buildingManager = GameObject.Find ("BuildingManager");
 		createBuilding ();
 	}
@@ -42,11 +42,11 @@ public class BuildingCreation : MonoBehaviour {
 		int x = 0;
 		int z = 0;
 
-		building.localScale = planeTransform.localScale;
-		building.localScale -= new Vector3 (0.15f, 0, 0.15f);
+		// building.localScale = planeTransform.localScale;
+		// building.localScale -= new Vector3 (0.25f, 0.20f, 0.15f);
 
-		industryBuilding.localScale = planeTransform.localScale;
-		industryBuilding.localScale -= new Vector3 (0.15f, 0.30f, 0.30f);
+		// industryBuilding.localScale = planeTransform.localScale;
+		// industryBuilding.localScale -= new Vector3 (0.15f, 0.35f, 0.30f);
 
 		foreach(GameObject grid in planes) {
 			Transform grid2 = grid.transform;
@@ -75,8 +75,8 @@ public class BuildingCreation : MonoBehaviour {
 			}
 
             //attach an interactible script to each grid object
-            grid.AddComponent<Interactible>();
-            grid.GetComponent<MeshCollider>().convex = true;
+           //grid.AddComponent<Interactible>();
+            //grid.GetComponent<MeshCollider>().convex = true;
             //grid.AddComponent<TapToPlaceParent>();
 			z++;
 			x++;
