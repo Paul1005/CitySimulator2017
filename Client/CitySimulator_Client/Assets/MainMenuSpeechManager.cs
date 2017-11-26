@@ -1,20 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
 
-/// <summary>
-/// Module: SpeechManager
-/// Team: HoloLens
-/// Description: Handles the speech commands available to the user.
-/// Author:
-///	 Name:  Microsoft   Date:   Unknown
-/// Modified by:
-///	 Name:  George Lee   Change: Stripped class down to accept only one command for the time being  Date: 2017-11-01
-/// Based on:
-/// https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_212
-/// </summary>
-public class SpeechManager : MonoBehaviour
+public class MainMenuSpeechManager : MonoBehaviour
 {
     private KeywordRecognizer keywordRecognizer = null;
     private Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
@@ -22,10 +12,17 @@ public class SpeechManager : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
-        keywords.Add("Reset world", () =>
+        keywords.Add("Play", () =>
         {
-            // Call the OnReset method on every descendant object.
-            this.BroadcastMessage("OnReset");
+            Debug.LogWarning("Voice play");
+            this.SendMessage("playGameBtn");
+            this.BroadcastMessage("playGameBtn");
+        });
+
+        keywords.Add("Exit", () =>
+        {
+            Debug.LogWarning("Voice exit");
+            this.BroadcastMessage("exitGameBtn");
         });
 
         // Tell the KeywordRecognizer about our keywords.
