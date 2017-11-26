@@ -31,8 +31,8 @@ public class ButtonManager : MonoBehaviour {
 	/// Plaies the game button.
 	/// </summary>
 	public void playGameBtn() {
-		SceneManager.LoadScene(sceneToLoad);
-	}
+        SceneManager.LoadScene(sceneToLoad);
+    }
 
 //	/// <summary>
 //	/// Open setting panel
@@ -66,6 +66,6 @@ public class ButtonManager : MonoBehaviour {
 	/// Exits the game button.
 	/// </summary>
 	public void exitGameBtn() {
-		Application.Quit ();
+		Application.Quit();
 	}
 }
