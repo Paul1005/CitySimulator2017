@@ -4,6 +4,16 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
 
+/// <summary>
+/// Module: HUDSpeechManager
+/// Team: Hololens
+/// Description: Handler for speech commands for the user to use for the menu in the main scene.
+/// Author:
+///	 Name: George Lee   Date: 2017-11-26
+///  Name: Steven Ma			Date: 2017-11-26
+/// Based on:
+/// https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_212
+/// </summary>
 public class HUDSpeechManager : MonoBehaviour {
 
     KeywordRecognizer keywordRecognizer = null;

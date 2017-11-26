@@ -2,6 +2,16 @@
 
 namespace Academy.HoloToolkit.Unity
 {
+    /// <summary>
+    /// Module: SimpleTagAlong
+    /// Team: Hololens
+    /// Description: Handler for having the main scene menu follow the user's gaze. 
+    /// Author:
+    ///	 Name: George Lee   Date: 2017-11-26
+    ///  Name: Steven Ma			Date: 2017-11-26
+    /// Based on:
+    /// https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_212
+    /// </summary>
     public class SimpleTagalong : MonoBehaviour
     {
         // Simple Tagalongs seek to stay at a fixed distance from the Camera.
