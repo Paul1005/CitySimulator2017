@@ -8,7 +8,8 @@ namespace Academy.HoloToolkit.Unity
     /// Team: HoloLens
     /// Description: GestureManager handles the various types of gestures used in the project, such as air tapping.
     /// Author: 
-    ///	 Name:  Microsoft   Date:   Unknown
+    ///	 Name:  Microsoft   Date:   Unknown 
+    ///	 Name:  Paul McCarlie      Change: Commented out touch command Date: 2017-11-25
     /// Based on:  
     /// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_210
     /// </summary>
@@ -188,12 +189,12 @@ namespace Academy.HoloToolkit.Unity
 
         private void NavigationRecognizer_TappedEvent(InteractionSourceKind source, int tapCount, Ray ray)
         {
-            GameObject focusedObject = InteractibleManager.Instance.FocusedGameObject;
+           /* GameObject focusedObject = InteractibleManager.Instance.FocusedGameObject;
 
             if (focusedObject != null)
             {
                 focusedObject.SendMessageUpwards("OnSelect");
-            }
+            }*/
         }
     }
 }

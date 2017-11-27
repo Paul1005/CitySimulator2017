@@ -28,13 +28,13 @@ namespace Academy.HoloToolkit.Unity
         [Tooltip("Drag a prefab object to parent the feedback assets.")]
         public GameObject FeedbackParent;
 
-        private Interactible FocusedInteractible
+        private GUIObjectInteractive FocusedInteractible
         {
             get
             {
                 if (InteractibleManager.Instance.FocusedGameObject != null)
                 {
-                    return InteractibleManager.Instance.FocusedGameObject.GetComponent<Interactible>();
+                    return InteractibleManager.Instance.FocusedGameObject.GetComponent<GUIObjectInteractive>();
                 }
 
                 return null;
@@ -88,6 +88,8 @@ namespace Academy.HoloToolkit.Unity
 
         private void UpdateHandDetectedState()
         {
+            print(CursorManager.Instance);
+            print(handDetectedGameObject);
             if (handDetectedGameObject == null || CursorManager.Instance == null)
             {
                 return;
@@ -115,6 +117,10 @@ namespace Academy.HoloToolkit.Unity
 
         private void UpdateScrollDetectedState()
         {
+           /* print(scrollDetectedGameObject);
+            print(FocusedInteractible);
+            print(GestureManager.Instance.ActiveRecognizer);
+            print(GestureManager.Instance.NavigationRecognizer);*/
             if (scrollDetectedGameObject == null)
             {
                 return;

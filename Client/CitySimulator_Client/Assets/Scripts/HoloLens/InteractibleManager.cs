@@ -7,6 +7,8 @@ using UnityEngine;
 /// Description: InteractibleManager keeps tracks of which GameObject is currently in focus.
 /// Author: 
 ///	 Name:  Microsoft   Date:   Unknown
+/// Modified by:	
+///	 Name:  Paul McCarlie    Change:Commented out interactible methods Date: 2017-11-25
 /// Based on:  
 /// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_210
 /// </summary>
@@ -41,8 +43,9 @@ public class InteractibleManager : Singleton<InteractibleManager>
         {
             FocusedGameObject = null;
         }
-
-        if (FocusedGameObject != oldFocusedGameObject)
+        //print(FocusedGameObject.GetComponent<Interactible>());
+       // print(FocusedGameObject);
+       /* if (FocusedGameObject != oldFocusedGameObject)
         {
             ResetFocusedInteractible();
 
@@ -64,6 +67,6 @@ public class InteractibleManager : Singleton<InteractibleManager>
             {
                 oldFocusedGameObject.SendMessage("GazeExited");
             }
-        }
+        }*/
     }
 }

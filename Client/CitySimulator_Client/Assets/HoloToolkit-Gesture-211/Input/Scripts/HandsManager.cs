@@ -10,6 +10,8 @@ namespace Academy.HoloToolkit.Unity
     /// Description: HandsManager keeps track of when a hand is detected.
     /// Author: 
     ///	 Name:  Microsoft   Date:   Unknown
+    /// Modified by:	
+    ///	 Name:  Paul McCarlie      Change: Changed interactible to  GUIObjectInteractive Date: 2017-11-25
     /// Based on:  
     /// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_210
     /// </summary>
@@ -54,7 +56,7 @@ namespace Academy.HoloToolkit.Unity
         {
             // If this hologram has an audio clip, add an AudioSource with this clip.
             if (FingerPressedSound != null)
-            {
+           {
                 audioSource = GetComponent<AudioSource>();
                 if (audioSource == null)
                 {
@@ -64,17 +66,19 @@ namespace Academy.HoloToolkit.Unity
                 audioSource.clip = FingerPressedSound;
                 audioSource.playOnAwake = false;
                 audioSource.spatialBlend = 1;
-                audioSource.dopplerLevel = 0;
+                audioSource.dopplerLevel = 0; 
             }
         }
 
         private void InteractionManager_SourceDetected(InteractionSourceState hand)
         {
+            print("sourceDetected");
             HandDetected = true;
         }
 
         private void InteractionManager_SourceLost(InteractionSourceState hand)
         {
+            print("sourcelost");
             HandDetected = false;
 
             // 2.a: Reset FocusedGameObject.
@@ -83,12 +87,11 @@ namespace Academy.HoloToolkit.Unity
 
         private void InteractionManager_SourcePressed(InteractionSourceState hand)
         {
+            print(InteractibleManager.Instance.FocusedGameObject);
             if (InteractibleManager.Instance.FocusedGameObject != null)
             {
                 // Play a select sound if we have an audio source and are not targeting an asset with a select sound.
-                if (audioSource != null && !audioSource.isPlaying &&
-                    (InteractibleManager.Instance.FocusedGameObject.GetComponent<Interactible>() != null &&
-                    InteractibleManager.Instance.FocusedGameObject.GetComponent<Interactible>().TargetFeedbackSound == null))
+                if (audioSource != null && !audioSource.isPlaying && InteractibleManager.Instance.FocusedGameObject.GetComponent<GUIObjectInteractive>() != null)
                 {
                     audioSource.Play();
                 }

@@ -9,6 +9,7 @@ namespace Academy.HoloToolkit.Unity
     /// Description: Show a hand guidance indicator when the user's hand is close to leaving the camera's view.
     /// Author: 
     ///	 Name:  Microsoft   Date:   Unknown
+    ///	 Name:  Paul McCarlie      Change: Changed interactible to  GUIObjectInteractive Date: 2017-11-25
     /// Based on:  
     /// 	https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_211
     /// </summary>
@@ -111,11 +112,11 @@ namespace Academy.HoloToolkit.Unity
             if (!hand.pressed ||
                 HandsManager.Instance.FocusedGameObject == null ||
                 (HandsManager.Instance.FocusedGameObject != null &&
-                HandsManager.Instance.FocusedGameObject.GetComponent<Interactible>() == null))
+                HandsManager.Instance.FocusedGameObject.GetComponent<GUIObjectInteractive>() == null))
             {
                 print(hand.pressed);
                 print(HandsManager.Instance.FocusedGameObject);
-                print(HandsManager.Instance.FocusedGameObject.GetComponent<Interactible>());
+                print(HandsManager.Instance.FocusedGameObject.GetComponent<GUIObjectInteractive>());
 
                 return;
             }
