@@ -22,7 +22,7 @@ public class CityCommands : MonoBehaviour
     GestureAction gestureAction;
     GUIMouseEventManager eventManager;
     CursorFeedback cursorFeedback;
-
+    GameObject cursor;
     // Use this for initialization
     private AudioSource audioSource;
     public AudioClip rotateMode;
@@ -37,7 +37,8 @@ public class CityCommands : MonoBehaviour
         originalRotation = this.transform.localRotation;
         gestureAction = GetComponent<GestureAction>();
         eventManager = GetComponent<GUIMouseEventManager>();
-        cursorFeedback = GetComponent<CursorFeedback>();
+        cursor = GameObject.Find("Cursor");
+        cursorFeedback = cursor.GetComponent<CursorFeedback>();
     }
 
     // Called by SpeechManager when the user says the "Reset world" command
