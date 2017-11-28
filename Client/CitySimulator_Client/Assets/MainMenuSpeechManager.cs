@@ -22,14 +22,14 @@ public class MainMenuSpeechManager : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
-        keywords.Add("Play", () =>
+        keywords.Add("Start game", () =>
         {
             Debug.LogWarning("Voice play");
             this.SendMessage("playGameBtn");
             this.BroadcastMessage("playGameBtn");
         });
 
-        keywords.Add("Exit", () =>
+        keywords.Add("Exit game", () =>
         {
             Debug.LogWarning("Voice exit");
             this.BroadcastMessage("exitGameBtn");

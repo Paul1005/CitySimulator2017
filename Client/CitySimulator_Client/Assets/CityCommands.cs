@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Academy.HoloToolkit.Unity;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,6 +21,8 @@ public class CityCommands : MonoBehaviour
     Quaternion originalRotation;
     GestureAction gestureAction;
     GUIMouseEventManager eventManager;
+    CursorFeedback cursorFeedback;
+
     // Use this for initialization
     private AudioSource audioSource;
     public AudioClip rotateMode;
@@ -34,6 +37,7 @@ public class CityCommands : MonoBehaviour
         originalRotation = this.transform.localRotation;
         gestureAction = GetComponent<GestureAction>();
         eventManager = GetComponent<GUIMouseEventManager>();
+        cursorFeedback = GetComponent<CursorFeedback>();
     }
 
     // Called by SpeechManager when the user says the "Reset world" command
@@ -58,6 +62,8 @@ public class CityCommands : MonoBehaviour
     {
         gestureAction.enabled = true;
         eventManager.isEnabled = false;
+        cursorFeedback.scrollEnabled = true;
+
         audioSource.clip = rotateMode;
         audioSource.playOnAwake = false;
         audioSource.spatialBlend = 1;
@@ -69,6 +75,8 @@ public class CityCommands : MonoBehaviour
     {
         gestureAction.enabled = false;
         eventManager.isEnabled = true;
+        cursorFeedback.scrollEnabled = false;
+
         audioSource.clip = selectMode;
         audioSource.playOnAwake = false;
         audioSource.spatialBlend = 1;
