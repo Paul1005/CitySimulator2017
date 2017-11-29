@@ -28,6 +28,7 @@ namespace Academy.HoloToolkit.Unity
         [Tooltip("Drag a prefab object to parent the feedback assets.")]
         public GameObject FeedbackParent;
 
+        public bool scrollEnabled;
         private GUIObjectInteractive FocusedInteractible
         {
             get
@@ -88,8 +89,8 @@ namespace Academy.HoloToolkit.Unity
 
         private void UpdateHandDetectedState()
         {
-            print(CursorManager.Instance);
-            print(handDetectedGameObject);
+            //print(CursorManager.Instance);
+           // print(handDetectedGameObject);
             if (handDetectedGameObject == null || CursorManager.Instance == null)
             {
                 return;
@@ -117,10 +118,6 @@ namespace Academy.HoloToolkit.Unity
 
         private void UpdateScrollDetectedState()
         {
-           /* print(scrollDetectedGameObject);
-            print(FocusedInteractible);
-            print(GestureManager.Instance.ActiveRecognizer);
-            print(GestureManager.Instance.NavigationRecognizer);*/
             if (scrollDetectedGameObject == null)
             {
                 return;
@@ -132,8 +129,10 @@ namespace Academy.HoloToolkit.Unity
                 scrollDetectedGameObject.SetActive(false);
                 return;
             }
-
-            scrollDetectedGameObject.SetActive(true);
+            if (scrollEnabled == true)
+            {
+                scrollDetectedGameObject.SetActive(true);
+            }
         }
     }
 }

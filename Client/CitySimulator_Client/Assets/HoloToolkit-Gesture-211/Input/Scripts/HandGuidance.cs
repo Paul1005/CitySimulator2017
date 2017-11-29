@@ -34,7 +34,7 @@ namespace Academy.HoloToolkit.Unity
 
         void Start()
         {
-            print("start");
+            //print("start");
             // Register for hand and finger events to know where your hand
             // is being tracked and what state it is in.
             InteractionManager.SourceLost += InteractionManager_SourceLost;

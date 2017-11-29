@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
@@ -19,7 +20,10 @@ using UnityEngine.Windows.Speech;
 public class SpeechManager : MonoBehaviour
 {
     private KeywordRecognizer keywordRecognizer = null;
+
     private Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
+
+   // private DictationRecognizer m_DictationRecognizer;
 
     // Use this for initialization
     private void Start()
@@ -57,6 +61,29 @@ public class SpeechManager : MonoBehaviour
 
         // Tell the KeywordRecognizer about our keywords.
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
+
+       /* m_DictationRecognizer.DictationResult += (text, confidence) =>
+        {
+            print("Dictation result: {0}" + text);
+        };
+
+        m_DictationRecognizer.DictationHypothesis += (text) =>
+        {
+            print("Dictation hypothesis: {0}" + text);
+        };
+
+        m_DictationRecognizer.DictationComplete += (completionCause) =>
+        {
+            if (completionCause != DictationCompletionCause.Complete)
+                print("Dictation completed unsuccessfully: {0}."+ completionCause);
+        };
+
+        m_DictationRecognizer.DictationError += (error, hresult) =>
+        {
+            print("Dictation error: {0}; HResult = {1}." +error+ hresult);
+        };
+
+        m_DictationRecognizer.Start();*/
 
         // Register a callback for the KeywordRecognizer and start recognizing!
         keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
