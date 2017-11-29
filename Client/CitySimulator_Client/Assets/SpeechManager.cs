@@ -13,7 +13,7 @@ using UnityEngine.Windows.Speech;
 /// Modified by:
 ///	 Name:  George Lee      Change: Stripped class down to accept only one command for the time being      Date: 2017-11-01
 ///	 Name:  George Lee      Change: Added move city command for spacial mapping                            Date: 2017-11-25
-///	 Name:  Paul McCarlie   Change: Added mode switching for roration and selection for the time being     Date: 2017-11-01
+///	 Name:  Paul McCarlie   Change: Added mode switching for rotation and selection                        Date: 2017-11-01
 /// Based on:
 /// https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_212
 /// </summary>
@@ -23,11 +23,12 @@ public class SpeechManager : MonoBehaviour
 
     private Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 
-   // private DictationRecognizer m_DictationRecognizer;
+    // private DictationRecognizer m_DictationRecognizer;
 
     // Use this for initialization
     private void Start()
     {
+        // add all the keywords
         keywords.Add("Reset world", () =>
         {
             // Call the OnReset method on every descendant object.
@@ -62,34 +63,38 @@ public class SpeechManager : MonoBehaviour
         // Tell the KeywordRecognizer about our keywords.
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
 
-       /* m_DictationRecognizer.DictationResult += (text, confidence) =>
-        {
-            print("Dictation result: {0}" + text);
-        };
+        /* m_DictationRecognizer.DictationResult += (text, confidence) =>
+         {
+             print("Dictation result: {0}" + text);
+         };
 
-        m_DictationRecognizer.DictationHypothesis += (text) =>
-        {
-            print("Dictation hypothesis: {0}" + text);
-        };
+         m_DictationRecognizer.DictationHypothesis += (text) =>
+         {
+             print("Dictation hypothesis: {0}" + text);
+         };
 
-        m_DictationRecognizer.DictationComplete += (completionCause) =>
-        {
-            if (completionCause != DictationCompletionCause.Complete)
-                print("Dictation completed unsuccessfully: {0}."+ completionCause);
-        };
+         m_DictationRecognizer.DictationComplete += (completionCause) =>
+         {
+             if (completionCause != DictationCompletionCause.Complete)
+                 print("Dictation completed unsuccessfully: {0}."+ completionCause);
+         };
 
-        m_DictationRecognizer.DictationError += (error, hresult) =>
-        {
-            print("Dictation error: {0}; HResult = {1}." +error+ hresult);
-        };
+         m_DictationRecognizer.DictationError += (error, hresult) =>
+         {
+             print("Dictation error: {0}; HResult = {1}." +error+ hresult);
+         };
 
-        m_DictationRecognizer.Start();*/
+         m_DictationRecognizer.Start();*/
 
         // Register a callback for the KeywordRecognizer and start recognizing!
         keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
         keywordRecognizer.Start();
     }
 
+    /// <summary>
+    /// Invokes the action assosiated with the keyword said
+    /// </summary>
+    /// <param name="args"></param>
     private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
     {
         System.Action keywordAction;

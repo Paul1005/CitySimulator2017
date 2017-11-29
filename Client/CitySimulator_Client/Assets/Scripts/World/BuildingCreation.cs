@@ -50,7 +50,6 @@ public class BuildingCreation : MonoBehaviour {
 
 		foreach(GameObject grid in planes) {
 			Transform grid2 = grid.transform;
-
 			// Residential building models
 			if (grid2.GetChild(0).GetComponent<TextMesh>().text == "1") {
 //				Debug.Log ("find 1: " + grid.transform.position.x + ", " + grid.transform.position.y);

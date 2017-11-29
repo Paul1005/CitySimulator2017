@@ -72,13 +72,13 @@ namespace Academy.HoloToolkit.Unity
 
         private void InteractionManager_SourceDetected(InteractionSourceState hand)
         {
-            print("sourceDetected");
+            //print("sourceDetected");
             HandDetected = true;
         }
 
         private void InteractionManager_SourceLost(InteractionSourceState hand)
         {
-            print("sourcelost");
+           // print("sourcelost");
             HandDetected = false;
 
             // 2.a: Reset FocusedGameObject.
