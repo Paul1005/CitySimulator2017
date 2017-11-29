@@ -989,18 +989,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1000012072213228, guid: a611e772ef8ddf64d8106a9cbb70f31c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 114611684728110934, guid: a611e772ef8ddf64d8106a9cbb70f31c,
+        type: 2}
+      propertyPath: DefaultCursorDistance
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114611684728110934, guid: a611e772ef8ddf64d8106a9cbb70f31c,
         type: 2}
       propertyPath: MinCursorDistance
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114611684728110934, guid: a611e772ef8ddf64d8106a9cbb70f31c,
-        type: 2}
-      propertyPath: DefaultCursorDistance
       value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
