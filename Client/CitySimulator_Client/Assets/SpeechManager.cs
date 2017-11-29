@@ -23,7 +23,7 @@ public class SpeechManager : MonoBehaviour
 
     private Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 
-    // private DictationRecognizer m_DictationRecognizer;
+   // private DictationRecognizer m_DictationRecognizer;
 
     // Use this for initialization
     private void Start()
@@ -63,7 +63,7 @@ public class SpeechManager : MonoBehaviour
         // Tell the KeywordRecognizer about our keywords.
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
 
-        /* m_DictationRecognizer.DictationResult += (text, confidence) =>
+       /*  m_DictationRecognizer.DictationResult += (text, confidence) =>
          {
              print("Dictation result: {0}" + text);
          };
