@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
@@ -23,8 +22,6 @@ public class SpeechManager : MonoBehaviour
 
     private Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 
-   // private DictationRecognizer m_DictationRecognizer;
-
     // Use this for initialization
     private void Start()
     {
@@ -39,12 +36,12 @@ public class SpeechManager : MonoBehaviour
             // Call the DeSelect method on every descendant object.
             this.BroadcastMessage("DeSelect");
         });
-        keywords.Add("Enable Rotation", () =>
+        keywords.Add("Rotation mode", () =>
         {
             // Call the Enable Rotation method on every descendant object.
             this.BroadcastMessage("EnableRotation");
         });
-        keywords.Add("Enable Selection", () =>
+        keywords.Add("Selection mode", () =>
         {
             // Call the Enable Selection method on every descendant object.
             this.BroadcastMessage("EnableSelection");
@@ -61,30 +58,7 @@ public class SpeechManager : MonoBehaviour
         });
 
         // Tell the KeywordRecognizer about our keywords.
-        keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
-
-       /*  m_DictationRecognizer.DictationResult += (text, confidence) =>
-         {
-             print("Dictation result: {0}" + text);
-         };
-
-         m_DictationRecognizer.DictationHypothesis += (text) =>
-         {
-             print("Dictation hypothesis: {0}" + text);
-         };
-
-         m_DictationRecognizer.DictationComplete += (completionCause) =>
-         {
-             if (completionCause != DictationCompletionCause.Complete)
-                 print("Dictation completed unsuccessfully: {0}."+ completionCause);
-         };
-
-         m_DictationRecognizer.DictationError += (error, hresult) =>
-         {
-             print("Dictation error: {0}; HResult = {1}." +error+ hresult);
-         };
-
-         m_DictationRecognizer.Start();*/
+        keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray(), ConfidenceLevel.Low);
 
         // Register a callback for the KeywordRecognizer and start recognizing!
         keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
@@ -97,8 +71,9 @@ public class SpeechManager : MonoBehaviour
     /// <param name="args"></param>
     private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
     {
+
+        Debug.Log("Keyword: " + args.text + "; Confidence: " + args.confidence);
         System.Action keywordAction;
-        print(args.text);
         if (keywords.TryGetValue(args.text, out keywordAction))
         {
             keywordAction.Invoke();

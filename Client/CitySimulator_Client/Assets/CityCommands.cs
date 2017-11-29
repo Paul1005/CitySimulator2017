@@ -83,6 +83,7 @@ public class CityCommands : MonoBehaviour
     /// </summary>
     void EnableRotation()
     {
+        print("rotation");
         //unselect currently selected building
         DeSelect();
 

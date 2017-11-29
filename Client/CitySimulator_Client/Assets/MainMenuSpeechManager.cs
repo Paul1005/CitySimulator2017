@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
@@ -23,22 +22,23 @@ public class MainMenuSpeechManager : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
+        print("start");
         // add keywords
-        keywords.Add("Start game", () =>
+        keywords.Add("Start", () =>
         {
             Debug.LogWarning("Voice play");
             this.SendMessage("playGameBtn");
             this.BroadcastMessage("playGameBtn");
         });
 
-        keywords.Add("Exit game", () =>
+        keywords.Add("Exit", () =>
         {
             Debug.LogWarning("Voice exit");
             this.BroadcastMessage("exitGameBtn");
         });
 
         // Tell the KeywordRecognizer about our keywords.
-        keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
+        keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray(), ConfidenceLevel.Low);
 
         // Register a callback for the KeywordRecognizer and start recognizing!
         keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
@@ -54,6 +54,7 @@ public class MainMenuSpeechManager : MonoBehaviour
         System.Action keywordAction;
         if (keywords.TryGetValue(args.text, out keywordAction))
         {
+            Debug.Log("Keyword: " + args.text + "; Confidence: " + args.confidence);
             keywordAction.Invoke();
         }
     }
