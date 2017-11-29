@@ -9,8 +9,9 @@ using UnityEngine.Windows.Speech;
 /// Team: Hololens
 /// Description: Handles speech commands for user to select options from the main menu.
 /// Author:
-///	 Name: Steven Ma   Date: 2017-11-26
-///  Name: George Lee			Date: 2017-11-26
+///	 Name: Steven Ma and George Lee  Date: 2017-11-26
+///	Modified by:
+///	 Name:  Paul McCarlie   Change: Changed key words to be more computer friendly   Date: 2017-1-28
 /// Based on:
 /// https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_212
 /// </summary>
@@ -22,6 +23,7 @@ public class MainMenuSpeechManager : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
+        // add keywords
         keywords.Add("Start game", () =>
         {
             Debug.LogWarning("Voice play");
@@ -43,6 +45,10 @@ public class MainMenuSpeechManager : MonoBehaviour
         keywordRecognizer.Start();
     }
 
+    /// <summary>
+    /// Invokes the action assosiated with the keyword said
+    /// </summary>
+    /// <param name="args"></param>
     private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
     {
         System.Action keywordAction;

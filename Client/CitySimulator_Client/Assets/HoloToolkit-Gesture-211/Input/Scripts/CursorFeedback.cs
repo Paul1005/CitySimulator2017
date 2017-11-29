@@ -8,6 +8,8 @@ namespace Academy.HoloToolkit.Unity
     /// Description: CursorFeedback class takes GameObjects to give cursor feedback to users based on different states.
     /// Author:
     ///	 Name: Microsoft   Date: Unknown
+    ///	Modified by:
+    ///	 Name Paul McCarlie Change: Added booleon to switch scroll feedback on and off Date: 2017-11-28
     /// Based on:
     /// https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_211
     /// </summary>
@@ -28,7 +30,9 @@ namespace Academy.HoloToolkit.Unity
         [Tooltip("Drag a prefab object to parent the feedback assets.")]
         public GameObject FeedbackParent;
 
+        // determines whether scroll feedback is enabled
         public bool scrollEnabled;
+
         private GUIObjectInteractive FocusedInteractible
         {
             get
@@ -129,6 +133,8 @@ namespace Academy.HoloToolkit.Unity
                 scrollDetectedGameObject.SetActive(false);
                 return;
             }
+
+            //Activate scroll feedback only if we are in rotatoin mode
             if (scrollEnabled == true)
             {
                 scrollDetectedGameObject.SetActive(true);
