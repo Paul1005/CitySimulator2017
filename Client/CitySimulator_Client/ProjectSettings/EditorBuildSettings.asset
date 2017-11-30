@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/MainMenu_Scene_HoloLens.unity
     guid: edbf5a1cf7311304abb255b881d2a8a7
   - enabled: 1
-    path: Assets/Main_Scene_HoloLens_WIP.unity
-    guid: 873dc6de6ca6ac44690c9a2fa67bd6d9
+    path: Assets/Main_Scene_HoloLens.unity
+    guid: 5c998e1d4ec4cd24a8f3a09967a12829

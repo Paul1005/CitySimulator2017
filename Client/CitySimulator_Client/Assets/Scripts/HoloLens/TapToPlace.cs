@@ -22,11 +22,12 @@ public class TapToPlace : MonoBehaviour
         print("onselect");
         // On each Select gesture, toggle whether the user is in placing mode.
         placing = !placing;
+        print(placing);
         // If the user is in placing mode, display the spatial mapping mesh.
         if (placing)
         {
+            print("hello");
             SpatialMapping.Instance.DrawVisualMeshes = true;
-            print(placing);
 
         }
         // If the user is not in placing mode, hide the spatial mapping mesh.
@@ -41,7 +42,7 @@ public class TapToPlace : MonoBehaviour
     {
         // If the user is in placing mode,
         // update the placement to match the user's gaze.
-       // print("update" + placing);
+       //print("update" + placing);
         if (placing)
         {
             // Do a raycast into the world that will only hit the Spatial Mapping mesh.
