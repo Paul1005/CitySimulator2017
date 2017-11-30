@@ -49,13 +49,6 @@ public class SpeechDebug : MonoBehaviour
         m_DictationRecognizer.DictationResult += (text, confidence) =>
         {
             print("Dictation result: " + text + " " + confidence);
-            System.Action keywordAction;
-
-            if (keywords.TryGetValue(text.ToLower(), out keywordAction))
-            {
-                print("works");
-                keywordAction.Invoke();
-            }
         };
 
         m_DictationRecognizer.DictationHypothesis += (text) =>
@@ -69,14 +62,12 @@ public class SpeechDebug : MonoBehaviour
             {
                 print("Dictation completed unsuccessfully: " + completionCause);
             }
-            //m_DictationRecognizer.Start();
         };
 
         m_DictationRecognizer.DictationError += (error, hresult) =>
         {
             print("Dictation error: {0}; HResult = {1}." + error + hresult);
         };
-       // m_DictationRecognizer.Stop();
         m_DictationRecognizer.Start();
     }
 }
