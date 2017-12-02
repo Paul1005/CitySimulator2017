@@ -97,8 +97,8 @@ public class GridCreation : MonoBehaviour {
 
                 // creates each cell of the grid
 
-                float positionX = x + (cellPrefab.localScale.x * x) * 10;
-                float positionZ = z + (cellPrefab.localScale.z * z) * 10;
+                float positionX = x + (cellPrefab.localScale.x * x) * 8;
+                float positionZ = z + (cellPrefab.localScale.z * z) * 8;
 
                  Instantiate(cellPrefab, 
 							new Vector3(positionX - size.x*2.7f, 0, positionZ - size.z*2.6f),
