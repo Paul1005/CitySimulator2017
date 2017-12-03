@@ -582,7 +582,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 127092656}
-  - component: {fileID: 127092658}
   - component: {fileID: 127092659}
   - component: {fileID: 127092657}
   m_Layer: 0
@@ -627,10 +626,10 @@ MonoBehaviour:
   roadTexture: {fileID: 2800000, guid: a4d1dcfb2222b41aba7162a5db220bc2, type: 3}
   turnOnGrid: 0
   turnOffGrid: 1
-  cityDataManager: {fileID: 127092658}
+  cityDataManager: {fileID: 0}
   cityDataManagerClientOnly: {fileID: 127092659}
   parentGrid: {fileID: 127092655}
---- !u!114 &127092658
+--- !u!114 &127092659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -638,30 +637,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 127092655}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6f2493ffc49642e9ab3de04db0dad19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textFileIndex: 0
-  turnOnTestGrid: 0
-  updateTheCity: 0
-  systemStartedTimeStamp: 0
-  systemCurrentTimeStamp: 0
-  timeInHour: 0
-  buildingManager: {fileID: 0}
-  characterManager: {fileID: 0}
-  gridManager: {fileID: 0}
-  nextTime: 0
-  runOnce: 0
-  runOnce2: 0
---- !u!114 &127092659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 127092655}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ec56e53711f443d880618f5968ed9ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f0c0e2d3482cc7409bd7a7c0b641bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textFileIndex: 0
@@ -2795,6 +2771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 35
+  isEnabled: 0
 --- !u!1 &1898423400
 GameObject:
   m_ObjectHideFlags: 0
