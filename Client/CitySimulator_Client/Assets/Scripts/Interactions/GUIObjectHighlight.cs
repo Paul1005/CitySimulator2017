@@ -6,7 +6,7 @@ using System.Collections;
 /// Team: Client
 /// Description: Highlight unit when it is selected
 /// Author: Benjamin Hao Date: Oct. 24th, 2017
-/// Modified by: N/A
+/// Modified by: Benjamin Hao   Change: Added DisplayInfo   Date: Nov.25th, 2017
 /// Based on:  N/A
 /// </summary>
 
@@ -14,20 +14,32 @@ public class GUIObjectHighlight : Interaction
 {
 
     public GameObject DisplayItem; // Display unit when it is selected
+    public GameObject DisplayInfo; // Display unit when it is selected
+    float scaleXBubble;
+    float scaleYBubble;
+    float scaleZBubble;
+    float scaleXHighlight;
+    float scaleYHighlight;
+    float scaleZHighlight;
 
     public override void Deselect()
     {
         DisplayItem.SetActive(false);
+        DisplayInfo.SetActive(false);
     }
 
     public override void Select()
     {
         DisplayItem.SetActive(true);
+        DisplayInfo.SetActive(true);
     }
 
     // Use this for initialization
     void Start()
     {
         DisplayItem.SetActive(false);
+        DisplayInfo.SetActive(false);
+        DisplayItem.transform.localScale = DisplayItem.transform.localScale * 6;
+        DisplayInfo.transform.localScale = DisplayInfo.transform.localScale * 6;
     }
 }
