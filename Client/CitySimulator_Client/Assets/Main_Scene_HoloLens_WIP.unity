@@ -1610,9 +1610,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1136310390}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
 --- !u!1 &1203797820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,10 +1839,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1296765962}
-  m_IsActive: 0
-  m_LocalPosition: {x: 0, y: 0, z: 16}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_AnchoredPosition: {x: -163, y: -68}
 --- !u!1001 &1431179209
 Prefab:
   m_ObjectHideFlags: 0
