@@ -17,10 +17,6 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class ButtonManager : MonoBehaviour
 {
-    /// <summary>
-    /// The main menu.
-    /// </summary>
-    public Transform mainMenu;
 
     /// <summary>
     /// The scene to load.
