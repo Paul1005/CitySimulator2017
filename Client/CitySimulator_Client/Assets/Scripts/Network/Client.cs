@@ -24,7 +24,7 @@ using System.Net;
 
 public class Client : MonoBehaviour
 {
-    public GameObject chatContainer;
+   /* public GameObject chatContainer;
     public GameObject messagePrefab;
 
     public string clientName;
@@ -166,7 +166,7 @@ public class Client : MonoBehaviour
 	/// </summary>
 	private void OnDisable() {
 		CloseSocket ();
-	}
+	}*/
 }
 
 

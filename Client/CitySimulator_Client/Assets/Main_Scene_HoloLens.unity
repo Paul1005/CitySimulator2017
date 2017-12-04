@@ -272,6 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 400002, guid: 46d9ed999096b428483588d0fe170b7a, type: 3}
+  characterManager: {fileID: 0}
 --- !u!4 &17867335
 Transform:
   m_ObjectHideFlags: 0
@@ -1656,10 +1657,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcdb4073001e641bbad4282e2b45e207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProfilePic: {fileID: 1203797822}
-  Line1: {fileID: 1296765964}
-  Line2: {fileID: 1619327304}
-  Line3: {fileID: 946238333}
+  Line1: {fileID: 0}
+  Line2: {fileID: 0}
+  Line3: {fileID: 0}
 --- !u!114 &1278615831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2204,6 +2204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f765d087692ec454b8dc1fa5830570d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 1
   isEnabled: 1
 --- !u!114 &1760693629
 MonoBehaviour:
@@ -2228,7 +2229,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f2493ffc49642e9ab3de04db0dad19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textFileIndex: 0
   turnOnTestGrid: 0
+  updateTheCity: 0
+  systemStartedTimeStamp: 0
+  systemCurrentTimeStamp: 0
+  timeInHour: 0
+  buildingManager: {fileID: 0}
+  characterManager: {fileID: 0}
+  gridManager: {fileID: 0}
+  nextTime: 0
+  runOnce: 0
+  runOnce2: 0
 --- !u!114 &1760693631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2257,6 +2269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cellPrefab: {fileID: 4821721827746646, guid: 99b103d4662624792811adfb61fc7ac0, type: 2}
   size: {x: 0, y: 0, z: 0}
+  roadTexture: {fileID: 0}
   cityDataManager: {fileID: 0}
   parentGrid: {fileID: 0}
   turnOnGrid: 0
@@ -2597,7 +2610,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4788286781758380, guid: f4ae73dcd6206a94a827ea561fbf2c08, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114161293428975736, guid: f4ae73dcd6206a94a827ea561fbf2c08,
         type: 2}
@@ -2639,60 +2652,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59a5cedf2abe0349980e8d38fe29455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &2096448956
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4000012659030676, guid: 87596db941ad3bf45a16b586b6e28b5c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012659030676, guid: 87596db941ad3bf45a16b586b6e28b5c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012659030676, guid: 87596db941ad3bf45a16b586b6e28b5c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012659030676, guid: 87596db941ad3bf45a16b586b6e28b5c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012659030676, guid: 87596db941ad3bf45a16b586b6e28b5c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012659030676, guid: 87596db941ad3bf45a16b586b6e28b5c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012659030676, guid: 87596db941ad3bf45a16b586b6e28b5c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012659030676, guid: 87596db941ad3bf45a16b586b6e28b5c, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011744501634, guid: 87596db941ad3bf45a16b586b6e28b5c,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012342941982, guid: 87596db941ad3bf45a16b586b6e28b5c,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011226809484, guid: 87596db941ad3bf45a16b586b6e28b5c,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 87596db941ad3bf45a16b586b6e28b5c, type: 2}
-  m_IsPrefabParent: 0

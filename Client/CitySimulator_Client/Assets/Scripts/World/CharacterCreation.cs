@@ -46,7 +46,7 @@ public class CharacterCreation : MonoBehaviour {
 		Transform human = 
 			Instantiate (character,
 				new Vector3 (source.transform.position.x, 0, source.transform.position.z),
-				Quaternion.identity,characterManager.transform) as Transform;
+				Quaternion.identity, source.transform) as Transform;
 
 		human.gameObject.AddComponent<CharacterMove> ();
 		human.GetComponent<CharacterMove> ().X_Dest = dest_x;
@@ -108,6 +108,7 @@ public class CharacterCreation : MonoBehaviour {
 				human.GetComponent<CharacterMove> ().Z_Dest = xz[3];
 				int x = human.GetComponent<CharacterMove> ().X_Dest;
 				int z = human.GetComponent<CharacterMove> ().Z_Dest;
+                
 				//				Debug.Log("Population i: " + i + "\n" +  x + ", " + z);
 				xz.Clear ();
 			}
