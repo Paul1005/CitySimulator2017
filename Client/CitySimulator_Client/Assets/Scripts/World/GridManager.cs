@@ -77,14 +77,17 @@ public class GridManager : MonoBehaviour {
 				cellPrefab.GetComponent<GridColor> ().colorIndex = int.Parse(type);
 				
 				MeshRenderer component = cellPrefab.GetComponent<MeshRenderer>();
-				// component.material.mainTexture = roadTexture;
+                // component.material.mainTexture = roadTexture;
 
-				// creates each cell of the grid
-			 	Instantiate(cellPrefab, 
+                float positionX = x + (cellPrefab.localScale.x * x) * 10;
+                float positionZ = z + (cellPrefab.localScale.z * z) * 10;
+
+                // creates each cell of the grid
+                Instantiate(cellPrefab, 
 							new Vector3(
-							x + (cellPrefab.localScale.x * x)*8,
+                            positionX - size.x * 2.7f,
 							0,
-							z + (cellPrefab.localScale.z * z)*8),
+                            positionZ - size.z * 2.6f),
 							Quaternion.identity,
 							parentGrid.transform);
 			}
