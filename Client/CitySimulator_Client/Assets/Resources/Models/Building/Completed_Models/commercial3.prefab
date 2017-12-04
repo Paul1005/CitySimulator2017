@@ -111,7 +111,11 @@ GameObject:
   - component: {fileID: 114866658371852174}
   - component: {fileID: 65601810581400260}
   m_Layer: 0
+<<<<<<< HEAD
   m_Name: TEST BUILDING59
+=======
+  m_Name: commercial3
+>>>>>>> WIP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
