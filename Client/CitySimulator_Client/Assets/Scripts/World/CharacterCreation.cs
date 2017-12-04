@@ -33,7 +33,7 @@ public class CharacterCreation : MonoBehaviour {
 	/// </summary>
 	public void createCharacter(string guid, int src_x, int src_z, int dest_x, int dest_z){
 		
-		Debug.Log("Reciever Order: Create Character: " + guid + " " + src_x +", " + src_z + "/" + dest_x + ", " + dest_z);
+		//Debug.Log("Reciever Order: Create Character: " + guid + " " + src_x +", " + src_z + "/" + dest_x + ", " + dest_z);
 
 		// Delete character if it already exists
 		destroyCharacter (guid);
@@ -41,7 +41,7 @@ public class CharacterCreation : MonoBehaviour {
 		planes = GameObject.FindGameObjectsWithTag("plane");
 
 		GameObject source = findPlane (src_x, src_z);
-		Debug.Log(source);
+		//Debug.Log(source);
 
 		Transform human = 
 			Instantiate (character,
@@ -60,7 +60,7 @@ public class CharacterCreation : MonoBehaviour {
 	/// </summary>
 	/// <param name="guid">GUID.</param>
 	public void destroyCharacter(string guid) {
-		Debug.Log("Reciever Order: Destroy Character: " + guid);
+		//Debug.Log("Reciever Order: Destroy Character: " + guid);
 
 		GameObject oldChar = GameObject.Find(guid);
 		if(!Object.ReferenceEquals(oldChar, null))

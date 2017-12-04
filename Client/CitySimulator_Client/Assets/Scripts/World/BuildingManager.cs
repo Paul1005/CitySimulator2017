@@ -219,17 +219,17 @@ public class BuildingManager : MonoBehaviour {
 	// Initializes the building objects
 	void initializeBuildingObjects() {
 
-		residential1 = Resources.Load("Models/Building/New_Models/residential1") as GameObject; 
-		residential2 = Resources.Load("Models/Building/New_Models/residential2") as GameObject; 
-		residential3 = Resources.Load("Models/Building/New_Models/residential3") as GameObject; 
+		residential1 = Resources.Load("Models/Building/Completed_Models/residential1") as GameObject; 
+		residential2 = Resources.Load("Models/Building/Completed_Models/residential2") as GameObject; 
+		residential3 = Resources.Load("Models/Building/Completed_Models/residential3") as GameObject; 
 
-		commercial1 = Resources.Load("Models/Building/New_Models/commercial1") as GameObject; 
-		commercial2 = Resources.Load("Models/Building/New_Models/commercial2") as GameObject; 
-		commercial3 = Resources.Load("Models/Building/New_Models/commercial3") as GameObject; 
+		commercial1 = Resources.Load("Models/Building/Completed_Models/commercial1") as GameObject; 
+		commercial2 = Resources.Load("Models/Building/Completed_Models/commercial2") as GameObject; 
+		commercial3 = Resources.Load("Models/Building/Completed_Models/commercial3") as GameObject; 
 
-		industrial1 = Resources.Load("Models/Building/New_Models/industrial1") as GameObject; 
-		industrial2 = Resources.Load("Models/Building/New_Models/industrial2") as GameObject; 
-		industrial3 = Resources.Load("Models/Building/New_Models/industrial3") as GameObject; 
+		industrial1 = Resources.Load("Models/Building/Completed_Models/industrial1") as GameObject; 
+		industrial2 = Resources.Load("Models/Building/Completed_Models/industrial2") as GameObject; 
+		industrial3 = Resources.Load("Models/Building/Completed_Models/industrial3") as GameObject; 
 	}
 
 
