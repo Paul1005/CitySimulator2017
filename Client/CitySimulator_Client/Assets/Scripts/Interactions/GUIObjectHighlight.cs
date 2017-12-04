@@ -39,7 +39,6 @@ public class GUIObjectHighlight : Interaction
     {
         DisplayItem.SetActive(false);
         DisplayInfo.SetActive(false);
-        DisplayItem.transform.localScale = DisplayItem.transform.localScale * 6;
         DisplayInfo.transform.localScale = DisplayInfo.transform.localScale * 6;
     }
 }
