@@ -33,7 +33,7 @@ public class GUIMouseEventManager : MonoBehaviour
 
     public bool isEnabled;
     //Use for capturing HoloLens gesture
-   /* private void Awake()
+    private void Awake()
     {
         // 2.b: Instantiate the NavigationRecognizer.
         gestureRecognizer = new GestureRecognizer();
@@ -66,7 +66,7 @@ public class GUIMouseEventManager : MonoBehaviour
                 }
             }
         };
-    }*/
+    }
  //TODO, implement update functionality into awake
     // Update is called once per frame
     void Update()
