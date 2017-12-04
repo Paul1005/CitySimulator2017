@@ -15,7 +15,12 @@ public class GUIObjectHighlight : Interaction
 
     public GameObject DisplayItem; // Display unit when it is selected
     public GameObject DisplayInfo; // Display unit when it is selected
-
+    float scaleXBubble;
+    float scaleYBubble;
+    float scaleZBubble;
+    float scaleXHighlight;
+    float scaleYHighlight;
+    float scaleZHighlight;
 
     public override void Deselect()
     {
@@ -34,5 +39,7 @@ public class GUIObjectHighlight : Interaction
     {
         DisplayItem.SetActive(false);
         DisplayInfo.SetActive(false);
+        DisplayItem.transform.localScale = DisplayItem.transform.localScale * 6;
+        DisplayInfo.transform.localScale = DisplayInfo.transform.localScale * 6;
     }
 }
