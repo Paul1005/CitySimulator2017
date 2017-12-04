@@ -405,7 +405,7 @@ public class CityDataManager : MonoBehaviour
     {
 
         cityData = JsonUtility.FromJson<CityData>(receivedCityState);
-
+        print(cityData.PeopleMoving);
         if (cityData == null)
             Debug.Log("tryParseInitialCityData: null");
 

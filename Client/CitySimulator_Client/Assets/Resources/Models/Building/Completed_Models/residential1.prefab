@@ -60,7 +60,11 @@ GameObject:
   - component: {fileID: 114608630058253004}
   - component: {fileID: 65088964268004782}
   m_Layer: 0
+<<<<<<< HEAD
+  m_Name: TEST BUILDING57
+=======
   m_Name: residential1
+>>>>>>> WIP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

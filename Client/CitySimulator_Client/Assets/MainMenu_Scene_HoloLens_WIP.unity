@@ -444,8 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc5c71fdfef8c421ab3212a6b58d01bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 1445229134}
-  sceneToLoad: Main_Scene_HoloLens
+  sceneToLoad: Main_Scene_HoloLens_WIP
 --- !u!1 &1231960213
 GameObject:
   m_ObjectHideFlags: 0

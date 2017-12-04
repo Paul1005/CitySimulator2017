@@ -48,10 +48,10 @@ public class CharacterCreation : MonoBehaviour {
 				new Vector3 (source.transform.position.x, 0, source.transform.position.z),
 				Quaternion.identity, source.transform) as Transform;
 
-		human.gameObject.AddComponent<CharacterMove> ();
+		/*human.gameObject.AddComponent<CharacterMove> ();
 		human.GetComponent<CharacterMove> ().X_Dest = dest_x;
 		human.GetComponent<CharacterMove> ().Z_Dest = dest_z;
-		human.GetComponent<CharacterMove> ().StartBFS = true;
+		human.GetComponent<CharacterMove> ().StartBFS = true;*/
 		human.name = guid;
 	}
 
