@@ -67,7 +67,7 @@ public class CharacterMove : MonoBehaviour {
 	/// For now, retrieve information at Start.
 	/// </summary>
 	void Start() {
-
+        
 	}
 
 
@@ -78,10 +78,13 @@ public class CharacterMove : MonoBehaviour {
 	/// </summary>
 	void Update() {
 
-		if(StartBFS){
-			bfs.OriginalPlane = findCurrentPlane();
-			bfs.Start ();
-			StartBFS = false;
+        if (StartBFS) {
+            bfs.OriginalPlane = findCurrentPlane();
+            bfs.Start();
+            print("Name: " + this.gameObject.name);
+            print("X: " + x_dest);
+            print("z: " + z_dest);
+            StartBFS = false;
 			StartMove = true;
 		}
 
@@ -98,8 +101,9 @@ public class CharacterMove : MonoBehaviour {
 		Vector3 targetDir;
 		Vector3 newDir;
 		float step = Time.deltaTime * speed;
-
-		if (bfs.Valid) {
+        print("Valid " + bfs.Valid);
+        if (bfs.Valid) {
+            print (this.gameObject.name + " is inside bfs Valid ");
 			bfs.Move ();
 			targetDir = bfs.CurrentPlane.transform.position - transform.position;
 			newDir = Vector3.RotateTowards (transform.forward, targetDir, step, 0.0F);

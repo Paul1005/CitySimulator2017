@@ -61,7 +61,8 @@ public class BuildingManager : MonoBehaviour {
 				instantiateBuilding (residential1,
 									 go.transform.localPosition.x,
 									 0,
-									 go.transform.localPosition.z);
+									 go.transform.localPosition.z,
+                                     go.transform);
                	rotateBuilding(residential1, go);
 				}
 
@@ -70,7 +71,8 @@ public class BuildingManager : MonoBehaviour {
 				instantiateBuilding (residential2,
 									 go.transform.localPosition.x,
 									 0,
-									 go.transform.localPosition.z);
+									 go.transform.localPosition.z,
+                                     go.transform);
 				rotateBuilding(residential2, go);
 				}
 
@@ -79,7 +81,8 @@ public class BuildingManager : MonoBehaviour {
 				instantiateBuilding (residential3,
 									 go.transform.localPosition.x,
 									 0,
-									 go.transform.localPosition.z);
+									 go.transform.localPosition.z,
+                                     go.transform);
 				rotateBuilding(residential3, go);
 				}
 			break; 
@@ -91,7 +94,8 @@ public class BuildingManager : MonoBehaviour {
 				instantiateBuilding (commercial1,
 									 go.transform.localPosition.x,
 									 0,
-									 go.transform.localPosition.z);
+									 go.transform.localPosition.z,
+                                     go.transform);
 				rotateBuilding(commercial1, go);
 				}
 
@@ -100,7 +104,8 @@ public class BuildingManager : MonoBehaviour {
 				instantiateBuilding (commercial2,
 									 go.transform.localPosition.x,
 									 0,
-									 go.transform.localPosition.z);
+									 go.transform.localPosition.z,
+                                     go.transform);
 				rotateBuilding(commercial2, go);
 				}
 
@@ -109,7 +114,8 @@ public class BuildingManager : MonoBehaviour {
 				instantiateBuilding (commercial3,
 									 go.transform.localPosition.x,
 									 0,
-									 go.transform.localPosition.z);
+									 go.transform.localPosition.z,
+                                     go.transform);
 				rotateBuilding(commercial3, go);
 				}
 			break;
@@ -121,7 +127,8 @@ public class BuildingManager : MonoBehaviour {
 				instantiateBuilding (industrial1,
 									 go.transform.localPosition.x,
 									 0,
-									 go.transform.localPosition.z);
+									 go.transform.localPosition.z,
+                                     go.transform);
 				rotateBuilding(industrial1, go);
 				}
 
@@ -130,7 +137,8 @@ public class BuildingManager : MonoBehaviour {
 				instantiateBuilding (industrial2,
 									 go.transform.localPosition.x,
 									 0,
-									 go.transform.localPosition.z);
+									 go.transform.localPosition.z,
+                                     go.transform);
 				rotateBuilding(industrial2, go);
 				}
 
@@ -139,7 +147,8 @@ public class BuildingManager : MonoBehaviour {
 				instantiateBuilding (industrial3,
 									 go.transform.localPosition.x,
 									 0,
-									 go.transform.localPosition.z);
+									 go.transform.localPosition.z,
+                                     go.transform);
 				rotateBuilding(industrial3, go);
 				}
 			break;
@@ -169,7 +178,8 @@ public class BuildingManager : MonoBehaviour {
 				instantiateBuilding(residential2, 
 									grid.transform.position.x,
 									grid.transform.position.y,
-									grid.transform.position.z);
+									grid.transform.position.z,
+                                    grid.transform);
                	residential2.transform.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Models/Building/New_Models/ACs/ACR2") as RuntimeAnimatorController;
 			}
 
@@ -179,7 +189,8 @@ public class BuildingManager : MonoBehaviour {
 				instantiateBuilding(commercial1, 
 									grid.transform.position.x,
 									grid.transform.position.y,
-									grid.transform.position.z);
+									grid.transform.position.z,
+                                    grid.transform);
 				Animator animator = commercial1.transform.GetComponent<Animator>();
                	animator.runtimeAnimatorController = Resources.Load("Models/Building/New_Models/ACs/ACC1") as RuntimeAnimatorController;
 			}
@@ -223,7 +234,7 @@ public class BuildingManager : MonoBehaviour {
 
 
 	// Instantiates the building object
-	void instantiateBuilding (GameObject obj, float x, float y, float z) {
+	void instantiateBuilding (GameObject obj, float x, float y, float z, Transform parent) {
 
 		//Creating each cell of grid
 		Instantiate (obj.transform,
@@ -231,7 +242,7 @@ public class BuildingManager : MonoBehaviour {
 						 y,
 						 z),
 						 Quaternion.identity,
-						 buildingManager.transform);
+						 parent);
 	}
 
 	/// <summary>
