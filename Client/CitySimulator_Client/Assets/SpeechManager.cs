@@ -12,18 +12,20 @@ using UnityEngine.Windows.Speech;
 /// Modified by:
 ///	 Name:  George Lee      Change: Stripped class down to accept only one command for the time being      Date: 2017-11-01
 ///	 Name:  George Lee      Change: Added move city command for spacial mapping                            Date: 2017-11-25
-///	 Name:  Paul McCarlie   Change: Added mode switching for roration and selection for the time being     Date: 2017-11-01
+///	 Name:  Paul McCarlie   Change: Added mode switching for rotation and selection                        Date: 2017-11-01
 /// Based on:
 /// https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_212
 /// </summary>
 public class SpeechManager : MonoBehaviour
 {
     private KeywordRecognizer keywordRecognizer = null;
+
     private Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 
     // Use this for initialization
     private void Start()
     {
+        // add all the keywords
         keywords.Add("Reset world", () =>
         {
             // Call the OnReset method on every descendant object.
@@ -34,12 +36,12 @@ public class SpeechManager : MonoBehaviour
             // Call the DeSelect method on every descendant object.
             this.BroadcastMessage("DeSelect");
         });
-        keywords.Add("Enable Rotation", () =>
+        keywords.Add("Rotation mode", () =>
         {
             // Call the Enable Rotation method on every descendant object.
             this.BroadcastMessage("EnableRotation");
         });
-        keywords.Add("Enable Selection", () =>
+        keywords.Add("Selection mode", () =>
         {
             // Call the Enable Selection method on every descendant object.
             this.BroadcastMessage("EnableSelection");
@@ -56,17 +58,22 @@ public class SpeechManager : MonoBehaviour
         });
 
         // Tell the KeywordRecognizer about our keywords.
-        keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
+        keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray(), ConfidenceLevel.Medium);
 
         // Register a callback for the KeywordRecognizer and start recognizing!
         keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
         keywordRecognizer.Start();
     }
 
+    /// <summary>
+    /// Invokes the action assosiated with the keyword said
+    /// </summary>
+    /// <param name="args"></param>
     private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
     {
+
+        Debug.Log("Keyword: " + args.text + "; Confidence: " + args.confidence);
         System.Action keywordAction;
-        print(args.text);
         if (keywords.TryGetValue(args.text, out keywordAction))
         {
             keywordAction.Invoke();

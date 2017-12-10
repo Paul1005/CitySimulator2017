@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System;
 
 /// <summary>
 /// Module: ShowUnitInfo
@@ -8,27 +8,27 @@ using System.Collections;
 /// Author: Benjamin Hao Date: Oct. 28th, 2017
 /// Modified by:
 ///     Name: Benjamin Hao   Change: modified Select() method  Date: Oct.29th, 2017
+///     Name: Benjamin Hao   Change: Removed Thumbnails for information bubble Date: 2017-11-25
+///     Name: Benjamin Hao   Change: Added GUID for each object. Date: 2017-11-28
 /// Based on:  N/A
 /// </summary>
 
 public class GUIObjectShowUnitInfo : Interaction
 {
-
-    public string Name;  // the name of units
-    public string info;   // the information of units
-    public string info2; // TODO: something needs to be added
-    public Sprite ProfilePic;    // the profile picture of units
+    public TextMesh Information;  // the name of units
+    public String objectGUID; // the GUID of objects
 
     /// <summary>
     /// override Select() method
     /// </summary>
     public override void Select()
     {
-        GUIObjectInfoManager.Current.SetPic(ProfilePic);
-        GUIObjectInfoManager.Current.SetLines(
-            Name,
-            info,
-            info2);
+
+        // TODO: interact with database
+        objectGUID = this.gameObject.name;
+        //get the data here
+
+        Information.text = objectGUID;
     }
 
     /// <summary>
@@ -36,7 +36,7 @@ public class GUIObjectShowUnitInfo : Interaction
     /// </summary>
     public override void Deselect()
     {
-        GUIObjectInfoManager.Current.ClearPic();
-        GUIObjectInfoManager.Current.ClearLines();
+        //GUIObjectInfoManager.Current.ClearPic();
+        //GUIObjectInfoManager.Current.ClearLines();
     }
 }
