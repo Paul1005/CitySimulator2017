@@ -93,8 +93,6 @@ namespace Academy.HoloToolkit.Unity
 
         private void UpdateHandDetectedState()
         {
-            //print(CursorManager.Instance);
-           // print(handDetectedGameObject);
             if (handDetectedGameObject == null || CursorManager.Instance == null)
             {
                 return;

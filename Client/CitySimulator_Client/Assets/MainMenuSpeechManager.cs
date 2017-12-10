@@ -10,7 +10,7 @@ using UnityEngine.Windows.Speech;
 /// Author:
 ///	 Name: Steven Ma and George Lee  Date: 2017-11-26
 ///	Modified by:
-///	 Name:  Paul McCarlie   Change: Changed key words to be more computer friendly   Date: 2017-1-28
+///	 Name:  Paul McCarlie   Change: Changed key words to be more computer friendly   Date: 2017-11-28
 /// Based on:
 /// https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_212
 /// </summary>

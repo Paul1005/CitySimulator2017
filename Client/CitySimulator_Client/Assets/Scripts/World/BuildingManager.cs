@@ -11,8 +11,9 @@ using UnityEngine;
 ///	 Name: Dongwon(Shawn) Kim   Date: 2017-09-28
 ///  Name: Andrew Lam			Date: 2017-09-28
 /// Modified by:	
-///	 Name: Andrew Lam   Change: create, update, destroy building funtions added 	Date: 2017-11-25
-///	 Name: Shawn  Kim   Change: Append objects to parent 							Date: 2017-10-20
+///	 Name: Andrew Lam       Change: create, update, destroy building funtions added 	Date: 2017-11-25
+///	 Name: Shawn  Kim       Change: Append objects to parent 							Date: 2017-10-20
+///	 Name: Paul McCarlie    Change: Change parent from buidling manager to grid         Date: 2017-12-02
 /// Based on:  N/A
 ///  https://docs.unity3d.com/ScriptReference/Material-color.html
 ///  https://docs.unity3d.com/ScriptReference/GameObject.html

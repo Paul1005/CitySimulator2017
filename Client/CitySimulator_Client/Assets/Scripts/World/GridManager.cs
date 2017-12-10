@@ -13,6 +13,7 @@ using UnityEngine;
 ///  Name: Dongwon(Shawn) Kim   Change:	adding data by CityDataManager  Date: 2017-10-18
 ///  Name: Dongwon(Shawn) Kim   Change:	turnGrid function        		Date: 2017-11-13
 ///  Name: Dongwon(Shawn) Kim   Change:	Changed this from Creation to GridManager		Date: 2017-11-28
+///  Name: Paul McCarlie        Change: Changed grid rotation point to center   Date: 2017-12-02
 /// Based on:  
 /// 	https://docs.unity3d.com/ScriptReference/Object.Instantiate.html
 /// 	http://answers.unity3d.com/questions/718778/trying-to-create-a-grid.html
@@ -79,14 +80,17 @@ public class GridManager : MonoBehaviour {
 				MeshRenderer component = cellPrefab.GetComponent<MeshRenderer>();
                 // component.material.mainTexture = roadTexture;
 
+                //coordinates represent front left corner of the grid
                 float positionX = x + (cellPrefab.localScale.x * x) * 10;
                 float positionZ = z + (cellPrefab.localScale.z * z) * 10;
 
-                // creates each cell of the grid
+                // creates each cell of the grid, will create grid with pivot point at center
                 Instantiate(cellPrefab, 
 							new Vector3(
+                            //positions x-coordinate of the cell so grid will rotate around the center
                             positionX - size.x * 2.7f,
 							0,
+                            //positions z-coordinate of the cell so grid will rotate around the center
                             positionZ - size.z * 2.6f),
 							Quaternion.identity,
 							parentGrid.transform);

@@ -11,7 +11,7 @@ using UnityEngine.VR.WSA.Input;
 /// Modified by:    
 ///     Name: Benjamin Hao   Change: added skip functionality to increase performance    Date: 2017-10-30
 ///     Name: Benjamin Hao   Change: added Shift key functionality: Mutipul Select       Date: 2017-10-30
-///     Name: Paul McCarlie  Change: add air tap functionality for HoloLens         Date: 2017-11-24
+///     Name: Paul McCarlie  Change: add air tap functionality for HoloLens              Date: 2017-11-24
 ///     Name: Benjamin Hao   Change: added Control key functionality: Zoom in            Date: 2017-11-29
 ///     
 /// Based on: https://docs.unity3d.com/ScriptReference/Input.GetMouseButtonDown.html
@@ -31,7 +31,9 @@ public class GUIMouseEventManager : MonoBehaviour
     // Following is for double click functionality
     public float moveSpeed = 1.0f;
 
+    //used to enable and disable air tap functionality when switching modes
     public bool isEnabled;
+
     //Use for capturing HoloLens gesture
     private void Awake()
     {
@@ -45,12 +47,13 @@ public class GUIMouseEventManager : MonoBehaviour
         // 2.b: Register for the TappedEvent.
         gestureRecognizer.TappedEvent += (source, tapCount, ray) =>
         {
-            print(isEnabled);
+            //if in selection mode
             if (isEnabled)
             {
+                //object the user is looking at
                 GameObject focusedObject = InteractibleManager.Instance.FocusedGameObject;
-                var interact = focusedObject.transform.GetComponent<GUIObjectInteractive>(); // Check "Interactive" module, if Null, then return
-                                                                                             //print(interact);
+                var interact = focusedObject.transform.GetComponent<GUIObjectInteractive>(); 
+                // Check "GUIObjectInteractive" module, if Null, then don't proceed
                 if (interact != null)
                 {
                     if (Selections.Count > 0)

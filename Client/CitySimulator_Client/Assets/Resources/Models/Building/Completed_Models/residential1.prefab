@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 114608630058253004}
   - component: {fileID: 65088964268004782}
   m_Layer: 0
-  m_Name: TEST BUILDING58
+  m_Name: residential1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

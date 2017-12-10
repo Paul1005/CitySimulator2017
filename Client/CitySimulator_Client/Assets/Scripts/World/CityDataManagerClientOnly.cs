@@ -12,6 +12,7 @@ using UnityEngine.UI;
 /// Author:
 ///  Name: Dongwon(Shawn) Kim    Date: 2017-12-01
 /// Modified by:    
+/// Name: Paul McCarlie Change: Hard coded grid size to 10x10   Date: 2017-12-04
 /// Based on:  
 /// https://docs.unity3d.com/Manual/JSONSerialization.html
 /// https://stackoverflow.com/questions/36239705/serialize-and-deserialize-json-and-json-array-in-unity
