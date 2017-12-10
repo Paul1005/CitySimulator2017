@@ -32,7 +32,7 @@ RenderSettings:
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
-  m_DefaultReflectionMode: 0
+  m_DefaultReflectionMode: 1
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
@@ -318,9 +318,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: 'Play
-
-'
+  m_Text: Start
 --- !u!222 &471027558
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -446,7 +444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc5c71fdfef8c421ab3212a6b58d01bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 1445229134}
   sceneToLoad: Main_Scene_HoloLens
 --- !u!1 &1231960213
 GameObject:
@@ -1165,7 +1162,11 @@ Prefab:
     - target: {fileID: 114431424514551254, guid: 3eddd1c29199313478dd3f912bfab2ab,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012022330152, guid: 3eddd1c29199313478dd3f912bfab2ab, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3eddd1c29199313478dd3f912bfab2ab, type: 2}
